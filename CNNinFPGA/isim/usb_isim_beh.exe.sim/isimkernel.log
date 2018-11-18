@@ -1,0 +1,28 @@
+Command line:
+   usb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58432
+
+Sun Nov 18 14:14:44 2018
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5182.92 Meg
+
+ Total Signals          : 22
+ Total Nets             : 38
+ Total Signal Drivers   : 11
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 15
+ Total Traceable Variables  : 35
+ Total Scalar Nets and Variables : 4305
+
+ Total Simulation Time: 0.484375 sec
+
+ Current Memory Usage: 5025.63 Meg
+
+Sun Nov 18 14:16:09 2018
+
