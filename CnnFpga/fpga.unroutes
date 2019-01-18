@@ -1,0 +1,92 @@
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Jan 17 22:50:40 2019
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 80 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   u_usb/Mram_buff110_RAMD_O
+   u_usb/Mram_buff111_RAMD_O
+   u_usb/Mram_buff112_RAMD_O
+   u_usb/Mram_buff113_RAMD_O
+   u_usb/Mram_buff114_RAMD_O
+   u_usb/Mram_buff115_RAMD_O
+   u_usb/Mram_buff116_RAMD_O
+   u_usb/Mram_buff117_RAMD_O
+   u_usb/Mram_buff118_RAMD_O
+   u_usb/Mram_buff119_RAMD_O
+   u_usb/Mram_buff11_RAMD_O
+   u_usb/Mram_buff120_RAMD_O
+   u_usb/Mram_buff12_RAMD_O
+   u_usb/Mram_buff13_RAMD_O
+   u_usb/Mram_buff14_RAMD_O
+   u_usb/Mram_buff15_RAMD_O
+   u_usb/Mram_buff16_RAMD_O
+   u_usb/Mram_buff17_RAMD_O
+   u_usb/Mram_buff18_RAMD_O
+   u_usb/Mram_buff19_RAMD_O
+   u_usb/Mram_buff210_RAMD_O
+   u_usb/Mram_buff211_RAMD_O
+   u_usb/Mram_buff212_RAMD_O
+   u_usb/Mram_buff213_RAMD_O
+   u_usb/Mram_buff214_RAMD_O
+   u_usb/Mram_buff215_RAMD_O
+   u_usb/Mram_buff216_RAMD_O
+   u_usb/Mram_buff217_RAMD_O
+   u_usb/Mram_buff218_RAMD_O
+   u_usb/Mram_buff219_RAMD_O
+   u_usb/Mram_buff21_RAMD_O
+   u_usb/Mram_buff220_RAMD_O
+   u_usb/Mram_buff22_RAMD_O
+   u_usb/Mram_buff23_RAMD_O
+   u_usb/Mram_buff24_RAMD_O
+   u_usb/Mram_buff25_RAMD_O
+   u_usb/Mram_buff26_RAMD_O
+   u_usb/Mram_buff27_RAMD_O
+   u_usb/Mram_buff28_RAMD_O
+   u_usb/Mram_buff29_RAMD_O
+   u_usb/Mram_buff310_RAMD_O
+   u_usb/Mram_buff311_RAMD_O
+   u_usb/Mram_buff312_RAMD_O
+   u_usb/Mram_buff313_RAMD_O
+   u_usb/Mram_buff314_RAMD_O
+   u_usb/Mram_buff315_RAMD_O
+   u_usb/Mram_buff316_RAMD_O
+   u_usb/Mram_buff317_RAMD_O
+   u_usb/Mram_buff318_RAMD_O
+   u_usb/Mram_buff319_RAMD_O
+   u_usb/Mram_buff31_RAMD_O
+   u_usb/Mram_buff320_RAMD_O
+   u_usb/Mram_buff32_RAMD_O
+   u_usb/Mram_buff33_RAMD_O
+   u_usb/Mram_buff34_RAMD_O
+   u_usb/Mram_buff35_RAMD_O
+   u_usb/Mram_buff36_RAMD_O
+   u_usb/Mram_buff37_RAMD_O
+   u_usb/Mram_buff38_RAMD_O
+   u_usb/Mram_buff39_RAMD_O
+   u_usb/Mram_buff410_RAMD_O
+   u_usb/Mram_buff411_RAMD_O
+   u_usb/Mram_buff412_RAMD_O
+   u_usb/Mram_buff413_RAMD_O
+   u_usb/Mram_buff414_RAMD_O
+   u_usb/Mram_buff415_RAMD_O
+   u_usb/Mram_buff416_RAMD_O
+   u_usb/Mram_buff417_RAMD_O
+   u_usb/Mram_buff418_RAMD_O
+   u_usb/Mram_buff419_RAMD_O
+   u_usb/Mram_buff41_RAMD_O
+   u_usb/Mram_buff420_RAMD_O
+   u_usb/Mram_buff42_RAMD_O
+   u_usb/Mram_buff43_RAMD_O
+   u_usb/Mram_buff44_RAMD_O
+   u_usb/Mram_buff45_RAMD_O
+   u_usb/Mram_buff46_RAMD_O
+   u_usb/Mram_buff47_RAMD_O
+   u_usb/Mram_buff48_RAMD_O
+   u_usb/Mram_buff49_RAMD_O
+
+

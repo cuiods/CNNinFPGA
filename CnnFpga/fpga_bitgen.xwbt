@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Project\CNNinFPGA\CnnFpga\fpga.ncd
+OUTFILE=D:\Project\CNNinFPGA\CnnFpga\fpga.bit
+FAMILY=Spartan6
+PART=xc6slx16-2ftg256
+WORKINGDIR=D:\Project\CNNinFPGA\CnnFpga
+LICENSE=WebPack
+USER_INFO=__0_0_0

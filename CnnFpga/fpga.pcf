@@ -1,0 +1,319 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Jan 17 22:50:31 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "USB_SLOE" LOCATE = SITE "T7" LEVEL 1;
+COMP "USB_SLRD" LOCATE = SITE "N8" LEVEL 1;
+COMP "USB_SLWR" LOCATE = SITE "P8" LEVEL 1;
+COMP "USB_FLAGA" LOCATE = SITE "L10" LEVEL 1;
+COMP "USB_FLAGB" LOCATE = SITE "P9" LEVEL 1;
+COMP "USB_FLAGC" LOCATE = SITE "T9" LEVEL 1;
+COMP "USB_FLAGD" LOCATE = SITE "T4" LEVEL 1;
+COMP "USB_IFCLK" LOCATE = SITE "M9" LEVEL 1;
+COMP "USB_PKEND" LOCATE = SITE "R5" LEVEL 1;
+COMP "USB_DATA<10>" LOCATE = SITE "M6" LEVEL 1;
+COMP "USB_DATA<11>" LOCATE = SITE "P6" LEVEL 1;
+COMP "USB_DATA<12>" LOCATE = SITE "N5" LEVEL 1;
+COMP "USB_DATA<13>" LOCATE = SITE "L7" LEVEL 1;
+COMP "USB_DATA<14>" LOCATE = SITE "P5" LEVEL 1;
+COMP "USB_DATA<15>" LOCATE = SITE "P7" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "H14" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "H13" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "F13" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "F14" LEVEL 1;
+COMP "USB_ADDR<0>" LOCATE = SITE "T6" LEVEL 1;
+COMP "USB_ADDR<1>" LOCATE = SITE "T5" LEVEL 1;
+COMP "USB_DATA<0>" LOCATE = SITE "M12" LEVEL 1;
+COMP "USB_DATA<1>" LOCATE = SITE "L8" LEVEL 1;
+COMP "USB_DATA<2>" LOCATE = SITE "N12" LEVEL 1;
+COMP "USB_DATA<3>" LOCATE = SITE "N9" LEVEL 1;
+COMP "USB_DATA<4>" LOCATE = SITE "P12" LEVEL 1;
+COMP "USB_DATA<5>" LOCATE = SITE "P11" LEVEL 1;
+COMP "USB_DATA<6>" LOCATE = SITE "M11" LEVEL 1;
+COMP "USB_DATA<7>" LOCATE = SITE "M10" LEVEL 1;
+COMP "USB_DATA<8>" LOCATE = SITE "P4" LEVEL 1;
+COMP "USB_DATA<9>" LOCATE = SITE "N6" LEVEL 1;
+PIN u_usb/Mram_out_buff_pins<18> = BEL "u_usb/Mram_out_buff" PINNAME
+        CLKAWRCLK;
+PIN u_usb/Mram_out_buff_pins<19> = BEL "u_usb/Mram_out_buff" PINNAME
+        CLKBRDCLK;
+PIN u_usb/Mram_buff_pins<18> = BEL "u_usb/Mram_buff" PINNAME CLKAWRCLK;
+PIN u_usb/Mram_buff_pins<19> = BEL "u_usb/Mram_buff" PINNAME CLKBRDCLK;
+TIMEGRP USB_IFCLK = BEL "u_usb/itr_FSM_FFd1" BEL "u_usb/state_FSM_FFd1" BEL
+        "u_usb/state_FSM_FFd2" BEL "u_usb/state_FSM_FFd3" BEL
+        "u_usb/usb_data_15" BEL "u_usb/usb_data_14" BEL "u_usb/usb_data_13"
+        BEL "u_usb/usb_data_12" BEL "u_usb/usb_data_11" BEL
+        "u_usb/usb_data_10" BEL "u_usb/usb_data_9" BEL "u_usb/usb_data_8" BEL
+        "u_usb/usb_data_7" BEL "u_usb/usb_data_6" BEL "u_usb/usb_data_5" BEL
+        "u_usb/usb_data_4" BEL "u_usb/usb_data_3" BEL "u_usb/usb_data_2" BEL
+        "u_usb/usb_data_1" BEL "u_usb/usb_data_0" BEL "u_usb/number_8" BEL
+        "u_usb/number_7" BEL "u_usb/number_6" BEL "u_usb/number_5" BEL
+        "u_usb/number_4" BEL "u_usb/number_3" BEL "u_usb/number_2" BEL
+        "u_usb/number_1" BEL "u_usb/number_0" BEL "u_usb/usb_slrd" BEL
+        "u_usb/counter_8" BEL "u_usb/counter_7" BEL "u_usb/counter_6" BEL
+        "u_usb/counter_5" BEL "u_usb/counter_4" BEL "u_usb/counter_3" BEL
+        "u_usb/counter_2" BEL "u_usb/counter_1" BEL "u_usb/counter_0" BEL
+        "u_usb/usb_pkend" BEL "u_usb/cal_count_8" BEL "u_usb/cal_count_7" BEL
+        "u_usb/cal_count_6" BEL "u_usb/cal_count_5" BEL "u_usb/cal_count_4"
+        BEL "u_usb/cal_count_3" BEL "u_usb/cal_count_2" BEL
+        "u_usb/cal_count_1" BEL "u_usb/cal_count_0" BEL "u_usb/out_number_8"
+        BEL "u_usb/out_number_7" BEL "u_usb/out_number_6" BEL
+        "u_usb/out_number_5" BEL "u_usb/out_number_4" BEL "u_usb/out_number_3"
+        BEL "u_usb/out_number_2" BEL "u_usb/out_number_1" BEL
+        "u_usb/out_number_0" BEL "u_usb/usb_slwr" BEL "u_usb/usb_addr_1" BEL
+        "u_usb/usb_sloe" BEL "u_usb/to_cal_tag" BEL "u_usb/calcute_tag" BEL
+        "u_usb/cal_count_1_1" BEL "u_usb/cal_count_2_1" BEL
+        "u_usb/cal_count_1_2" BEL "u_usb/cal_count_2_2" BEL
+        "u_usb/cal_count_4_1" BEL "u_usb/cal_count_6_1" BEL
+        "u_usb/cal_count_6_2" BEL "u_usb/cal_count_3_1" BEL
+        "u_usb/cal_count_7_1" BEL "u_usb/cal_count_7_2" BEL
+        "u_usb/cal_count_8_1" BEL "u_usb/cal_count_8_2" BEL
+        "u_usb/cal_count_2_3" BEL "u_usb/cal_count_0_1" BEL
+        "u_usb/cal_count_0_2" BEL "u_usb/cal_count_1_3" BEL
+        "USB_IFCLK_BUFGP/BUFG" PIN "u_usb/Mram_out_buff_pins<18>" PIN
+        "u_usb/Mram_out_buff_pins<19>" PIN "u_usb/Mram_buff_pins<18>" PIN
+        "u_usb/Mram_buff_pins<19>" BEL "u_usb/Mram_buff3293/SP" BEL
+        "u_usb/Mram_buff3293/DP" BEL "u_usb/Mram_buff3292/SP" BEL
+        "u_usb/Mram_buff3292/DP" BEL "u_usb/Mram_buff3283/SP" BEL
+        "u_usb/Mram_buff3283/DP" BEL "u_usb/Mram_buff3282/SP" BEL
+        "u_usb/Mram_buff3282/DP" BEL "u_usb/Mram_buff3291/SP" BEL
+        "u_usb/Mram_buff3291/DP" BEL "u_usb/Mram_buff3281/SP" BEL
+        "u_usb/Mram_buff3281/DP" BEL "u_usb/Mram_buff3273/SP" BEL
+        "u_usb/Mram_buff3273/DP" BEL "u_usb/Mram_buff3271/SP" BEL
+        "u_usb/Mram_buff3271/DP" BEL "u_usb/Mram_buff3253/SP" BEL
+        "u_usb/Mram_buff3253/DP" BEL "u_usb/Mram_buff3272/SP" BEL
+        "u_usb/Mram_buff3272/DP" BEL "u_usb/Mram_buff3252/SP" BEL
+        "u_usb/Mram_buff3252/DP" BEL "u_usb/Mram_buff3251/SP" BEL
+        "u_usb/Mram_buff3251/DP" BEL "u_usb/Mram_buff3262/SP" BEL
+        "u_usb/Mram_buff3262/DP" BEL "u_usb/Mram_buff3261/SP" BEL
+        "u_usb/Mram_buff3261/DP" BEL "u_usb/Mram_buff3263/SP" BEL
+        "u_usb/Mram_buff3263/DP" BEL "u_usb/Mram_buff2292/SP" BEL
+        "u_usb/Mram_buff2292/DP" BEL "u_usb/Mram_buff2291/SP" BEL
+        "u_usb/Mram_buff2291/DP" BEL "u_usb/Mram_buff2293/SP" BEL
+        "u_usb/Mram_buff2293/DP" BEL "u_usb/Mram_buff2282/SP" BEL
+        "u_usb/Mram_buff2282/DP" BEL "u_usb/Mram_buff2281/SP" BEL
+        "u_usb/Mram_buff2281/DP" BEL "u_usb/Mram_buff2283/SP" BEL
+        "u_usb/Mram_buff2283/DP" BEL "u_usb/Mram_buff2273/SP" BEL
+        "u_usb/Mram_buff2273/DP" BEL "u_usb/Mram_buff2272/SP" BEL
+        "u_usb/Mram_buff2272/DP" BEL "u_usb/Mram_buff2263/SP" BEL
+        "u_usb/Mram_buff2263/DP" BEL "u_usb/Mram_buff2262/SP" BEL
+        "u_usb/Mram_buff2262/DP" BEL "u_usb/Mram_buff2271/SP" BEL
+        "u_usb/Mram_buff2271/DP" BEL "u_usb/Mram_buff2261/SP" BEL
+        "u_usb/Mram_buff2261/DP" BEL "u_usb/Mram_buff2253/SP" BEL
+        "u_usb/Mram_buff2253/DP" BEL "u_usb/Mram_buff2251/SP" BEL
+        "u_usb/Mram_buff2251/DP" BEL "u_usb/Mram_buff4293/SP" BEL
+        "u_usb/Mram_buff4293/DP" BEL "u_usb/Mram_buff2252/SP" BEL
+        "u_usb/Mram_buff2252/DP" BEL "u_usb/Mram_buff4292/SP" BEL
+        "u_usb/Mram_buff4292/DP" BEL "u_usb/Mram_buff4291/SP" BEL
+        "u_usb/Mram_buff4291/DP" BEL "u_usb/Mram_buff4282/SP" BEL
+        "u_usb/Mram_buff4282/DP" BEL "u_usb/Mram_buff4281/SP" BEL
+        "u_usb/Mram_buff4281/DP" BEL "u_usb/Mram_buff4283/SP" BEL
+        "u_usb/Mram_buff4283/DP" BEL "u_usb/Mram_buff4272/SP" BEL
+        "u_usb/Mram_buff4272/DP" BEL "u_usb/Mram_buff4271/SP" BEL
+        "u_usb/Mram_buff4271/DP" BEL "u_usb/Mram_buff4273/SP" BEL
+        "u_usb/Mram_buff4273/DP" BEL "u_usb/Mram_buff4252/SP" BEL
+        "u_usb/Mram_buff4252/DP" BEL "u_usb/Mram_buff4251/SP" BEL
+        "u_usb/Mram_buff4251/DP" BEL "u_usb/Mram_buff4253/SP" BEL
+        "u_usb/Mram_buff4253/DP" BEL "u_usb/Mram_buff4263/SP" BEL
+        "u_usb/Mram_buff4263/DP" BEL "u_usb/Mram_buff4262/SP" BEL
+        "u_usb/Mram_buff4262/DP" BEL "u_usb/Mram_buff1293/SP" BEL
+        "u_usb/Mram_buff1293/DP" BEL "u_usb/Mram_buff1292/SP" BEL
+        "u_usb/Mram_buff1292/DP" BEL "u_usb/Mram_buff4261/SP" BEL
+        "u_usb/Mram_buff4261/DP" BEL "u_usb/Mram_buff1291/SP" BEL
+        "u_usb/Mram_buff1291/DP" BEL "u_usb/Mram_buff1283/SP" BEL
+        "u_usb/Mram_buff1283/DP" BEL "u_usb/Mram_buff1281/SP" BEL
+        "u_usb/Mram_buff1281/DP" BEL "u_usb/Mram_buff1273/SP" BEL
+        "u_usb/Mram_buff1273/DP" BEL "u_usb/Mram_buff1282/SP" BEL
+        "u_usb/Mram_buff1282/DP" BEL "u_usb/Mram_buff1272/SP" BEL
+        "u_usb/Mram_buff1272/DP" BEL "u_usb/Mram_buff1271/SP" BEL
+        "u_usb/Mram_buff1271/DP" BEL "u_usb/Mram_buff1262/SP" BEL
+        "u_usb/Mram_buff1262/DP" BEL "u_usb/Mram_buff1261/SP" BEL
+        "u_usb/Mram_buff1261/DP" BEL "u_usb/Mram_buff1263/SP" BEL
+        "u_usb/Mram_buff1263/DP" BEL "u_usb/Mram_buff1252/SP" BEL
+        "u_usb/Mram_buff1252/DP" BEL "u_usb/Mram_buff1251/SP" BEL
+        "u_usb/Mram_buff1251/DP" BEL "u_usb/Mram_buff1253/SP" BEL
+        "u_usb/Mram_buff1253/DP" BEL "u_usb/Mram_buff330/SP" BEL
+        "u_usb/Mram_buff330/DP" BEL "u_usb/Mram_buff324/SP" BEL
+        "u_usb/Mram_buff324/DP" BEL "u_usb/Mram_buff323/SP" BEL
+        "u_usb/Mram_buff323/DP" BEL "u_usb/Mram_buff322/SP" BEL
+        "u_usb/Mram_buff322/DP" BEL "u_usb/Mram_buff321/SP" BEL
+        "u_usb/Mram_buff321/DP" BEL "u_usb/Mram_buff230/SP" BEL
+        "u_usb/Mram_buff230/DP" BEL "u_usb/Mram_buff224/SP" BEL
+        "u_usb/Mram_buff224/DP" BEL "u_usb/Mram_buff222/SP" BEL
+        "u_usb/Mram_buff222/DP" BEL "u_usb/Mram_buff221/SP" BEL
+        "u_usb/Mram_buff221/DP" BEL "u_usb/Mram_buff223/SP" BEL
+        "u_usb/Mram_buff223/DP" BEL "u_usb/Mram_buff430/SP" BEL
+        "u_usb/Mram_buff430/DP" BEL "u_usb/Mram_buff424/SP" BEL
+        "u_usb/Mram_buff424/DP" BEL "u_usb/Mram_buff423/SP" BEL
+        "u_usb/Mram_buff423/DP" BEL "u_usb/Mram_buff422/SP" BEL
+        "u_usb/Mram_buff422/DP" BEL "u_usb/Mram_buff421/SP" BEL
+        "u_usb/Mram_buff421/DP" BEL "u_usb/Mram_buff130/SP" BEL
+        "u_usb/Mram_buff130/DP" BEL "u_usb/Mram_buff124/SP" BEL
+        "u_usb/Mram_buff124/DP" BEL "u_usb/Mram_buff123/SP" BEL
+        "u_usb/Mram_buff123/DP" BEL "u_usb/Mram_buff122/SP" BEL
+        "u_usb/Mram_buff122/DP" BEL "u_usb/Mram_buff121/SP" BEL
+        "u_usb/Mram_buff121/DP" BEL "u_usb/Mram_buff11_RAMA" BEL
+        "u_usb/Mram_buff11_RAMB" BEL "u_usb/Mram_buff11_RAMC" BEL
+        "u_usb/Mram_buff11_RAMD" BEL "u_usb/Mram_buff110_RAMA" BEL
+        "u_usb/Mram_buff110_RAMB" BEL "u_usb/Mram_buff110_RAMC" BEL
+        "u_usb/Mram_buff110_RAMD" BEL "u_usb/Mram_buff111_RAMA" BEL
+        "u_usb/Mram_buff111_RAMB" BEL "u_usb/Mram_buff111_RAMC" BEL
+        "u_usb/Mram_buff111_RAMD" BEL "u_usb/Mram_buff112_RAMA" BEL
+        "u_usb/Mram_buff112_RAMB" BEL "u_usb/Mram_buff112_RAMC" BEL
+        "u_usb/Mram_buff112_RAMD" BEL "u_usb/Mram_buff113_RAMA" BEL
+        "u_usb/Mram_buff113_RAMB" BEL "u_usb/Mram_buff113_RAMC" BEL
+        "u_usb/Mram_buff113_RAMD" BEL "u_usb/Mram_buff114_RAMA" BEL
+        "u_usb/Mram_buff114_RAMB" BEL "u_usb/Mram_buff114_RAMC" BEL
+        "u_usb/Mram_buff114_RAMD" BEL "u_usb/Mram_buff115_RAMA" BEL
+        "u_usb/Mram_buff115_RAMB" BEL "u_usb/Mram_buff115_RAMC" BEL
+        "u_usb/Mram_buff115_RAMD" BEL "u_usb/Mram_buff116_RAMA" BEL
+        "u_usb/Mram_buff116_RAMB" BEL "u_usb/Mram_buff116_RAMC" BEL
+        "u_usb/Mram_buff116_RAMD" BEL "u_usb/Mram_buff117_RAMA" BEL
+        "u_usb/Mram_buff117_RAMB" BEL "u_usb/Mram_buff117_RAMC" BEL
+        "u_usb/Mram_buff117_RAMD" BEL "u_usb/Mram_buff118_RAMA" BEL
+        "u_usb/Mram_buff118_RAMB" BEL "u_usb/Mram_buff118_RAMC" BEL
+        "u_usb/Mram_buff118_RAMD" BEL "u_usb/Mram_buff119_RAMA" BEL
+        "u_usb/Mram_buff119_RAMB" BEL "u_usb/Mram_buff119_RAMC" BEL
+        "u_usb/Mram_buff119_RAMD" BEL "u_usb/Mram_buff12_RAMA" BEL
+        "u_usb/Mram_buff12_RAMB" BEL "u_usb/Mram_buff12_RAMC" BEL
+        "u_usb/Mram_buff12_RAMD" BEL "u_usb/Mram_buff120_RAMA" BEL
+        "u_usb/Mram_buff120_RAMB" BEL "u_usb/Mram_buff120_RAMC" BEL
+        "u_usb/Mram_buff120_RAMD" BEL "u_usb/Mram_buff13_RAMA" BEL
+        "u_usb/Mram_buff13_RAMB" BEL "u_usb/Mram_buff13_RAMC" BEL
+        "u_usb/Mram_buff13_RAMD" BEL "u_usb/Mram_buff14_RAMA" BEL
+        "u_usb/Mram_buff14_RAMB" BEL "u_usb/Mram_buff14_RAMC" BEL
+        "u_usb/Mram_buff14_RAMD" BEL "u_usb/Mram_buff15_RAMA" BEL
+        "u_usb/Mram_buff15_RAMB" BEL "u_usb/Mram_buff15_RAMC" BEL
+        "u_usb/Mram_buff15_RAMD" BEL "u_usb/Mram_buff16_RAMA" BEL
+        "u_usb/Mram_buff16_RAMB" BEL "u_usb/Mram_buff16_RAMC" BEL
+        "u_usb/Mram_buff16_RAMD" BEL "u_usb/Mram_buff17_RAMA" BEL
+        "u_usb/Mram_buff17_RAMB" BEL "u_usb/Mram_buff17_RAMC" BEL
+        "u_usb/Mram_buff17_RAMD" BEL "u_usb/Mram_buff18_RAMA" BEL
+        "u_usb/Mram_buff18_RAMB" BEL "u_usb/Mram_buff18_RAMC" BEL
+        "u_usb/Mram_buff18_RAMD" BEL "u_usb/Mram_buff19_RAMA" BEL
+        "u_usb/Mram_buff19_RAMB" BEL "u_usb/Mram_buff19_RAMC" BEL
+        "u_usb/Mram_buff19_RAMD" BEL "u_usb/Mram_buff21_RAMA" BEL
+        "u_usb/Mram_buff21_RAMB" BEL "u_usb/Mram_buff21_RAMC" BEL
+        "u_usb/Mram_buff21_RAMD" BEL "u_usb/Mram_buff210_RAMA" BEL
+        "u_usb/Mram_buff210_RAMB" BEL "u_usb/Mram_buff210_RAMC" BEL
+        "u_usb/Mram_buff210_RAMD" BEL "u_usb/Mram_buff211_RAMA" BEL
+        "u_usb/Mram_buff211_RAMB" BEL "u_usb/Mram_buff211_RAMC" BEL
+        "u_usb/Mram_buff211_RAMD" BEL "u_usb/Mram_buff212_RAMA" BEL
+        "u_usb/Mram_buff212_RAMB" BEL "u_usb/Mram_buff212_RAMC" BEL
+        "u_usb/Mram_buff212_RAMD" BEL "u_usb/Mram_buff213_RAMA" BEL
+        "u_usb/Mram_buff213_RAMB" BEL "u_usb/Mram_buff213_RAMC" BEL
+        "u_usb/Mram_buff213_RAMD" BEL "u_usb/Mram_buff214_RAMA" BEL
+        "u_usb/Mram_buff214_RAMB" BEL "u_usb/Mram_buff214_RAMC" BEL
+        "u_usb/Mram_buff214_RAMD" BEL "u_usb/Mram_buff215_RAMA" BEL
+        "u_usb/Mram_buff215_RAMB" BEL "u_usb/Mram_buff215_RAMC" BEL
+        "u_usb/Mram_buff215_RAMD" BEL "u_usb/Mram_buff216_RAMA" BEL
+        "u_usb/Mram_buff216_RAMB" BEL "u_usb/Mram_buff216_RAMC" BEL
+        "u_usb/Mram_buff216_RAMD" BEL "u_usb/Mram_buff217_RAMA" BEL
+        "u_usb/Mram_buff217_RAMB" BEL "u_usb/Mram_buff217_RAMC" BEL
+        "u_usb/Mram_buff217_RAMD" BEL "u_usb/Mram_buff218_RAMA" BEL
+        "u_usb/Mram_buff218_RAMB" BEL "u_usb/Mram_buff218_RAMC" BEL
+        "u_usb/Mram_buff218_RAMD" BEL "u_usb/Mram_buff219_RAMA" BEL
+        "u_usb/Mram_buff219_RAMB" BEL "u_usb/Mram_buff219_RAMC" BEL
+        "u_usb/Mram_buff219_RAMD" BEL "u_usb/Mram_buff22_RAMA" BEL
+        "u_usb/Mram_buff22_RAMB" BEL "u_usb/Mram_buff22_RAMC" BEL
+        "u_usb/Mram_buff22_RAMD" BEL "u_usb/Mram_buff220_RAMA" BEL
+        "u_usb/Mram_buff220_RAMB" BEL "u_usb/Mram_buff220_RAMC" BEL
+        "u_usb/Mram_buff220_RAMD" BEL "u_usb/Mram_buff23_RAMA" BEL
+        "u_usb/Mram_buff23_RAMB" BEL "u_usb/Mram_buff23_RAMC" BEL
+        "u_usb/Mram_buff23_RAMD" BEL "u_usb/Mram_buff24_RAMA" BEL
+        "u_usb/Mram_buff24_RAMB" BEL "u_usb/Mram_buff24_RAMC" BEL
+        "u_usb/Mram_buff24_RAMD" BEL "u_usb/Mram_buff25_RAMA" BEL
+        "u_usb/Mram_buff25_RAMB" BEL "u_usb/Mram_buff25_RAMC" BEL
+        "u_usb/Mram_buff25_RAMD" BEL "u_usb/Mram_buff26_RAMA" BEL
+        "u_usb/Mram_buff26_RAMB" BEL "u_usb/Mram_buff26_RAMC" BEL
+        "u_usb/Mram_buff26_RAMD" BEL "u_usb/Mram_buff27_RAMA" BEL
+        "u_usb/Mram_buff27_RAMB" BEL "u_usb/Mram_buff27_RAMC" BEL
+        "u_usb/Mram_buff27_RAMD" BEL "u_usb/Mram_buff28_RAMA" BEL
+        "u_usb/Mram_buff28_RAMB" BEL "u_usb/Mram_buff28_RAMC" BEL
+        "u_usb/Mram_buff28_RAMD" BEL "u_usb/Mram_buff29_RAMA" BEL
+        "u_usb/Mram_buff29_RAMB" BEL "u_usb/Mram_buff29_RAMC" BEL
+        "u_usb/Mram_buff29_RAMD" BEL "u_usb/Mram_buff31_RAMA" BEL
+        "u_usb/Mram_buff31_RAMB" BEL "u_usb/Mram_buff31_RAMC" BEL
+        "u_usb/Mram_buff31_RAMD" BEL "u_usb/Mram_buff310_RAMA" BEL
+        "u_usb/Mram_buff310_RAMB" BEL "u_usb/Mram_buff310_RAMC" BEL
+        "u_usb/Mram_buff310_RAMD" BEL "u_usb/Mram_buff311_RAMA" BEL
+        "u_usb/Mram_buff311_RAMB" BEL "u_usb/Mram_buff311_RAMC" BEL
+        "u_usb/Mram_buff311_RAMD" BEL "u_usb/Mram_buff312_RAMA" BEL
+        "u_usb/Mram_buff312_RAMB" BEL "u_usb/Mram_buff312_RAMC" BEL
+        "u_usb/Mram_buff312_RAMD" BEL "u_usb/Mram_buff313_RAMA" BEL
+        "u_usb/Mram_buff313_RAMB" BEL "u_usb/Mram_buff313_RAMC" BEL
+        "u_usb/Mram_buff313_RAMD" BEL "u_usb/Mram_buff314_RAMA" BEL
+        "u_usb/Mram_buff314_RAMB" BEL "u_usb/Mram_buff314_RAMC" BEL
+        "u_usb/Mram_buff314_RAMD" BEL "u_usb/Mram_buff315_RAMA" BEL
+        "u_usb/Mram_buff315_RAMB" BEL "u_usb/Mram_buff315_RAMC" BEL
+        "u_usb/Mram_buff315_RAMD" BEL "u_usb/Mram_buff316_RAMA" BEL
+        "u_usb/Mram_buff316_RAMB" BEL "u_usb/Mram_buff316_RAMC" BEL
+        "u_usb/Mram_buff316_RAMD" BEL "u_usb/Mram_buff317_RAMA" BEL
+        "u_usb/Mram_buff317_RAMB" BEL "u_usb/Mram_buff317_RAMC" BEL
+        "u_usb/Mram_buff317_RAMD" BEL "u_usb/Mram_buff318_RAMA" BEL
+        "u_usb/Mram_buff318_RAMB" BEL "u_usb/Mram_buff318_RAMC" BEL
+        "u_usb/Mram_buff318_RAMD" BEL "u_usb/Mram_buff319_RAMA" BEL
+        "u_usb/Mram_buff319_RAMB" BEL "u_usb/Mram_buff319_RAMC" BEL
+        "u_usb/Mram_buff319_RAMD" BEL "u_usb/Mram_buff32_RAMA" BEL
+        "u_usb/Mram_buff32_RAMB" BEL "u_usb/Mram_buff32_RAMC" BEL
+        "u_usb/Mram_buff32_RAMD" BEL "u_usb/Mram_buff320_RAMA" BEL
+        "u_usb/Mram_buff320_RAMB" BEL "u_usb/Mram_buff320_RAMC" BEL
+        "u_usb/Mram_buff320_RAMD" BEL "u_usb/Mram_buff33_RAMA" BEL
+        "u_usb/Mram_buff33_RAMB" BEL "u_usb/Mram_buff33_RAMC" BEL
+        "u_usb/Mram_buff33_RAMD" BEL "u_usb/Mram_buff34_RAMA" BEL
+        "u_usb/Mram_buff34_RAMB" BEL "u_usb/Mram_buff34_RAMC" BEL
+        "u_usb/Mram_buff34_RAMD" BEL "u_usb/Mram_buff35_RAMA" BEL
+        "u_usb/Mram_buff35_RAMB" BEL "u_usb/Mram_buff35_RAMC" BEL
+        "u_usb/Mram_buff35_RAMD" BEL "u_usb/Mram_buff36_RAMA" BEL
+        "u_usb/Mram_buff36_RAMB" BEL "u_usb/Mram_buff36_RAMC" BEL
+        "u_usb/Mram_buff36_RAMD" BEL "u_usb/Mram_buff37_RAMA" BEL
+        "u_usb/Mram_buff37_RAMB" BEL "u_usb/Mram_buff37_RAMC" BEL
+        "u_usb/Mram_buff37_RAMD" BEL "u_usb/Mram_buff38_RAMA" BEL
+        "u_usb/Mram_buff38_RAMB" BEL "u_usb/Mram_buff38_RAMC" BEL
+        "u_usb/Mram_buff38_RAMD" BEL "u_usb/Mram_buff39_RAMA" BEL
+        "u_usb/Mram_buff39_RAMB" BEL "u_usb/Mram_buff39_RAMC" BEL
+        "u_usb/Mram_buff39_RAMD" BEL "u_usb/Mram_buff41_RAMA" BEL
+        "u_usb/Mram_buff41_RAMB" BEL "u_usb/Mram_buff41_RAMC" BEL
+        "u_usb/Mram_buff41_RAMD" BEL "u_usb/Mram_buff410_RAMA" BEL
+        "u_usb/Mram_buff410_RAMB" BEL "u_usb/Mram_buff410_RAMC" BEL
+        "u_usb/Mram_buff410_RAMD" BEL "u_usb/Mram_buff411_RAMA" BEL
+        "u_usb/Mram_buff411_RAMB" BEL "u_usb/Mram_buff411_RAMC" BEL
+        "u_usb/Mram_buff411_RAMD" BEL "u_usb/Mram_buff412_RAMA" BEL
+        "u_usb/Mram_buff412_RAMB" BEL "u_usb/Mram_buff412_RAMC" BEL
+        "u_usb/Mram_buff412_RAMD" BEL "u_usb/Mram_buff413_RAMA" BEL
+        "u_usb/Mram_buff413_RAMB" BEL "u_usb/Mram_buff413_RAMC" BEL
+        "u_usb/Mram_buff413_RAMD" BEL "u_usb/Mram_buff414_RAMA" BEL
+        "u_usb/Mram_buff414_RAMB" BEL "u_usb/Mram_buff414_RAMC" BEL
+        "u_usb/Mram_buff414_RAMD" BEL "u_usb/Mram_buff415_RAMA" BEL
+        "u_usb/Mram_buff415_RAMB" BEL "u_usb/Mram_buff415_RAMC" BEL
+        "u_usb/Mram_buff415_RAMD" BEL "u_usb/Mram_buff416_RAMA" BEL
+        "u_usb/Mram_buff416_RAMB" BEL "u_usb/Mram_buff416_RAMC" BEL
+        "u_usb/Mram_buff416_RAMD" BEL "u_usb/Mram_buff417_RAMA" BEL
+        "u_usb/Mram_buff417_RAMB" BEL "u_usb/Mram_buff417_RAMC" BEL
+        "u_usb/Mram_buff417_RAMD" BEL "u_usb/Mram_buff418_RAMA" BEL
+        "u_usb/Mram_buff418_RAMB" BEL "u_usb/Mram_buff418_RAMC" BEL
+        "u_usb/Mram_buff418_RAMD" BEL "u_usb/Mram_buff419_RAMA" BEL
+        "u_usb/Mram_buff419_RAMB" BEL "u_usb/Mram_buff419_RAMC" BEL
+        "u_usb/Mram_buff419_RAMD" BEL "u_usb/Mram_buff42_RAMA" BEL
+        "u_usb/Mram_buff42_RAMB" BEL "u_usb/Mram_buff42_RAMC" BEL
+        "u_usb/Mram_buff42_RAMD" BEL "u_usb/Mram_buff420_RAMA" BEL
+        "u_usb/Mram_buff420_RAMB" BEL "u_usb/Mram_buff420_RAMC" BEL
+        "u_usb/Mram_buff420_RAMD" BEL "u_usb/Mram_buff43_RAMA" BEL
+        "u_usb/Mram_buff43_RAMB" BEL "u_usb/Mram_buff43_RAMC" BEL
+        "u_usb/Mram_buff43_RAMD" BEL "u_usb/Mram_buff44_RAMA" BEL
+        "u_usb/Mram_buff44_RAMB" BEL "u_usb/Mram_buff44_RAMC" BEL
+        "u_usb/Mram_buff44_RAMD" BEL "u_usb/Mram_buff45_RAMA" BEL
+        "u_usb/Mram_buff45_RAMB" BEL "u_usb/Mram_buff45_RAMC" BEL
+        "u_usb/Mram_buff45_RAMD" BEL "u_usb/Mram_buff46_RAMA" BEL
+        "u_usb/Mram_buff46_RAMB" BEL "u_usb/Mram_buff46_RAMC" BEL
+        "u_usb/Mram_buff46_RAMD" BEL "u_usb/Mram_buff47_RAMA" BEL
+        "u_usb/Mram_buff47_RAMB" BEL "u_usb/Mram_buff47_RAMC" BEL
+        "u_usb/Mram_buff47_RAMD" BEL "u_usb/Mram_buff48_RAMA" BEL
+        "u_usb/Mram_buff48_RAMB" BEL "u_usb/Mram_buff48_RAMC" BEL
+        "u_usb/Mram_buff48_RAMD" BEL "u_usb/Mram_buff49_RAMA" BEL
+        "u_usb/Mram_buff49_RAMB" BEL "u_usb/Mram_buff49_RAMC" BEL
+        "u_usb/Mram_buff49_RAMD";
+TS_CLOCK_USB = PERIOD TIMEGRP "USB_IFCLK" 48 MHz HIGH 50%;
+SCHEMATIC END;
+

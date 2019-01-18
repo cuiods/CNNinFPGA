@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=D:\Project\CNNinFPGA\CNNinFPGA\led.ncd
-OUTFILE=D:\Project\CNNinFPGA\CNNinFPGA\led.bit
-FAMILY=Spartan6
-PART=xc6slx16-2ftg256
-WORKINGDIR=D:\Project\CNNinFPGA\CNNinFPGA
-LICENSE=WebPack
-USER_INFO=__0_0_0

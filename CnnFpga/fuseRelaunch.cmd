@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Project/CNNinFPGA/CnnFpga/fpga_tb_isim_beh.exe" -prj "D:/Project/CNNinFPGA/CnnFpga/fpga_tb_beh.prj" "work.fpga_tb" "work.glbl" 

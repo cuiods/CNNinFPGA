@@ -1,0 +1,269 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-S2L8G06::  Thu Jan 17 22:50:33 2019
+
+par -w -intstyle ise -ol high -mt off fpga_map.ncd fpga.ncd fpga.pcf 
+
+
+Constraints file: fpga.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment D:\Software\Xilinx\14.7\ISE_DS\ISE\.
+   "fpga" is an NCD, version 3.2, device xc6slx16, package ftg256, speed -2
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   105 out of  18,224    1%
+    Number used as Flip Flops:                  79
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               26
+  Number of Slice LUTs:                        795 out of   9,112    8%
+    Number used as logic:                      365 out of   9,112    4%
+      Number using O6 output only:             285
+      Number using O5 output only:               0
+      Number using O5 and O6:                   80
+      Number used as ROM:                        0
+    Number used as Memory:                     430 out of   2,176   19%
+      Number used as Dual Port RAM:            430
+        Number using O6 output only:           370
+        Number using O5 output only:            10
+        Number using O5 and O6:                 50
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   244 out of   2,278   10%
+  Number of MUXCYs used:                        40 out of   4,556    1%
+  Number of LUT Flip Flop pairs used:          803
+    Number with an unused Flip Flop:           715 out of     803   89%
+    Number with an unused LUT:                   8 out of     803    1%
+    Number of fully used LUT-FF pairs:          80 out of     803    9%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        31 out of     186   16%
+    Number of LOCed IOBs:                       31 out of      31  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          2 out of      64    3%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
+
+WARNING:Par:288 - The signal u_usb/Mram_buff416_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff413_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff414_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff113_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff120_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff415_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff420_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff419_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff417_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff314_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff315_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff320_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff115_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff117_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff118_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff44_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff418_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff216_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff316_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff318_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff317_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff116_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff119_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff41_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff43_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff42_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff46_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff47_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff214_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff215_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff313_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff220_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff319_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff217_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff24_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff31_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff48_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff45_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff213_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff218_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff219_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff114_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff23_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff21_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff26_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff32_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff34_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff33_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff210_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff212_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff49_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff410_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff18_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff22_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff28_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff29_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff211_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff411_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff412_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff15_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff25_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff27_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff37_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff39_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff311_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff17_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff16_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff112_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff111_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff19_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff110_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff35_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff38_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff36_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff312_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal u_usb/Mram_buff310_RAMD_O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 5372 unrouted;      REAL time: 2 secs 
+
+Phase  2  : 4884 unrouted;      REAL time: 2 secs 
+
+Phase  3  : 1478 unrouted;      REAL time: 3 secs 
+
+Phase  4  : 1478 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+
+Updating file: fpga.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Total REAL time to Router completion: 6 secs 
+Total CPU time to Router completion: 6 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|     USB_IFCLK_BUFGP |  BUFGMUX_X2Y9| No   |  143 |  0.062     |  1.134      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_CLOCK_USB = PERIOD TIMEGRP "USB_IFCLK" | SETUP       |     4.804ns|    16.029ns|       0|           0
+   48 MHz HIGH 50%                          | HOLD        |     0.346ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 80 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 6 secs 
+Total CPU time to PAR completion: 6 secs 
+
+Peak Memory Usage:  4499 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 82
+Number of info messages: 0
+
+Writing design to file fpga.ncd
+
+
+
+PAR done!

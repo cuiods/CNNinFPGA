@@ -1,6 +1,0 @@
-xst -intstyle ise -ifn "D:/Project/CNNinFPGA/CNNinFPGA/led.xst" -ofn "D:/Project/CNNinFPGA/CNNinFPGA/led.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Led.ucf -p xc6slx16-ftg256-2 led.ngc led.ngd  
-map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o led_map.ncd led.ngd led.pcf 
-par -w -intstyle ise -ol high -mt off led_map.ncd led.ncd led.pcf 
-trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml led.twx led.ncd -o led.twr led.pcf -ucf Led.ucf 
-bitgen -intstyle ise -f led.ut led.ncd 

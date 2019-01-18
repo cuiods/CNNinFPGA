@@ -1,0 +1,17 @@
+﻿生成启动时间为 2019/1/16 21:28:42。
+     1>项目“D:\Project\CNNinFPGA\PicTest\picTest\picTest\picTest.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         D:\Software\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\picTest.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Software\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\picTest.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt picTest.cpp
+         picTest.cpp
+       Link:
+         D:\Software\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Project\CNNinFPGA\PicTest\picTest\Debug\picTest.exe" /INCREMENTAL /NOLOGO "D:\Software\Cypress\Cypress Suite USB 3.4.7\CyAPI\lib\x86\CyAPI.lib" opencv_ml2411d.lib opencv_calib3d2411d.lib opencv_contrib2411d.lib opencv_core2411d.lib opencv_features2d2411d.lib opencv_flann2411d.lib opencv_gpu2411d.lib opencv_highgui2411d.lib opencv_imgproc2411d.lib opencv_legacy2411d.lib opencv_objdetect2411d.lib opencv_ts2411d.lib opencv_video2411d.lib opencv_nonfree2411d.lib opencv_ocl2411d.lib opencv_photo2411d.lib opencv_stitching2411d.lib opencv_superres2411d.lib opencv_videostab2411d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Project\CNNinFPGA\PicTest\picTest\Debug\picTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Project\CNNinFPGA\PicTest\picTest\Debug\picTest.lib" /MACHINE:X86 Debug\picTest.obj
+         Debug\stdafx.obj
+     1>LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+         picTest.vcxproj -> D:\Project\CNNinFPGA\PicTest\picTest\Debug\picTest.exe
+     1>已完成生成项目“D:\Project\CNNinFPGA\PicTest\picTest\picTest\picTest.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.09
