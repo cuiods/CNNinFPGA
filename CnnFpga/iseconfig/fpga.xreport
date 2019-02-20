@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-01-17T22:50:11</DateModified>
+  <DateModified>2019-01-20T08:35:56</DateModified>
   <ModuleName>fpga</ModuleName>
   <SummaryTimeStamp>2019-01-17T22:48:48</SummaryTimeStamp>
   <SavedFilePath>D:/Project/CNNinFPGA/CnnFpga/iseconfig/fpga.xreport</SavedFilePath>

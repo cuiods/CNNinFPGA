@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: fpga.prj
 
@@ -119,8 +119,8 @@ Parsing module <fpga>.
 Elaborating module <fpga>.
 
 Elaborating module <usb(DATA_WIDTH=16)>.
-WARNING:HDLCompiler:413 - "D:\Project\CNNinFPGA\CnnFpga\usb.v" Line 250: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "D:\Project\CNNinFPGA\CnnFpga\usb.v" Line 255: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "D:\Project\CNNinFPGA\CnnFpga\usb.v" Line 258: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "D:\Project\CNNinFPGA\CnnFpga\usb.v" Line 263: Result of 10-bit expression is truncated to fit in 9-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -149,18 +149,18 @@ Synthesizing Unit <usb>.
     Found 5-bit register for signal <itr>.
     Found 3-bit register for signal <state>.
     Found 1-bit register for signal <usb_slrd>.
-    Found finite state machine <FSM_1> for signal <itr>.
+    Found finite state machine <FSM_0> for signal <itr>.
     -----------------------------------------------------------------------
-    | States             | 2                                              |
-    | Transitions        | 12                                             |
+    | States             | 4                                              |
+    | Transitions        | 24                                             |
     | Inputs             | 5                                              |
-    | Outputs            | 1                                              |
+    | Outputs            | 6                                              |
     | Clock              | i_usb_ifclk (rising_edge)                      |
     | Power Up State     | 00000                                          |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found finite state machine <FSM_0> for signal <state>.
+    Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 6                                              |
     | Transitions        | 12                                             |
@@ -173,17 +173,30 @@ Synthesizing Unit <usb>.
     -----------------------------------------------------------------------
     Found 9-bit subtractor for signal <out_number[8]_GND_2_o_sub_29_OUT> created at line 212.
     Found 10-bit subtractor for signal <GND_2_o_GND_2_o_sub_33_OUT> created at line 219.
+    Found 16-bit subtractor for signal <cal_count[8]_cal_count[8]_sub_61_OUT> created at line 249.
+    Found 16-bit subtractor for signal <cal_count[8]_cal_count[8]_sub_64_OUT> created at line 249.
+    Found 16-bit subtractor for signal <cal_count[8]_cal_count[8]_sub_67_OUT> created at line 249.
+    Found 16-bit subtractor for signal <n0296> created at line 253.
+    Found 16-bit subtractor for signal <n0301> created at line 253.
+    Found 16-bit subtractor for signal <cal_count[8]_cal_count[8]_sub_85_OUT> created at line 253.
     Found 9-bit adder for signal <counter[8]_GND_2_o_add_27_OUT> created at line 211.
     Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_37_OUT> created at line 245.
-    Found 16-bit adder for signal <n0198> created at line 245.
+    Found 16-bit adder for signal <n0273> created at line 245.
     Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_40_OUT> created at line 245.
-    Found 16-bit adder for signal <n0203> created at line 245.
+    Found 16-bit adder for signal <n0278> created at line 245.
     Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_43_OUT> created at line 245.
-    Found 16-bit adder for signal <n0208> created at line 245.
+    Found 16-bit adder for signal <n0283> created at line 245.
     Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_46_OUT> created at line 245.
     Found 16-bit adder for signal <cal_count[8]_cal_count[8]_add_48_OUT> created at line 245.
-    Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_54_OUT> created at line 250.
-    Found 9-bit adder for signal <out_number[8]_GND_2_o_add_59_OUT> created at line 255.
+    Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_52_OUT> created at line 249.
+    Found 16-bit adder for signal <n0291> created at line 249.
+    Found 16-bit adder for signal <cal_count[8]_cal_count[8]_add_57_OUT> created at line 249.
+    Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_61_OUT> created at line 249.
+    Found 16-bit adder for signal <cal_count[8]_cal_count[8]_add_75_OUT> created at line 253.
+    Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_76_OUT> created at line 253.
+    Found 16-bit adder for signal <cal_count[8]_cal_count[8]_add_81_OUT> created at line 253.
+    Found 9-bit adder for signal <cal_count[8]_GND_2_o_add_90_OUT> created at line 258.
+    Found 9-bit adder for signal <out_number[8]_GND_2_o_add_99_OUT> created at line 263.
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <buff>, simulation mismatch.
     Found 257x16-bit dual-port RAM <Mram_buff> for signal <buff>.
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <out_buff>, simulation mismatch.
@@ -204,15 +217,15 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <out_buf
     Found 1-bit tristate buffer for signal <io_usb_data<2>> created at line 79
     Found 1-bit tristate buffer for signal <io_usb_data<1>> created at line 79
     Found 1-bit tristate buffer for signal <io_usb_data<0>> created at line 79
-    Found 9-bit comparator equal for signal <counter[8]_number[8]_equal_11_o> created at line 112
+    Found 9-bit comparator equal for signal <counter[8]_out_number[8]_equal_11_o> created at line 112
     Found 9-bit comparator not equal for signal <counter[8]_out_number[8]_equal_30_o> created at line 212
     Found 32-bit comparator greater for signal <n0055> created at line 219
     Summary:
-	inferred   6 RAM(s).
-	inferred  13 Adder/Subtractor(s).
+	inferred  10 RAM(s).
+	inferred  26 Adder/Subtractor(s).
 	inferred  60 D-type flip-flop(s).
 	inferred   3 Comparator(s).
-	inferred  27 Multiplexer(s).
+	inferred  37 Multiplexer(s).
 	inferred  16 Tristate(s).
 	inferred   2 Finite State Machine(s).
 Unit <usb> synthesized.
@@ -221,12 +234,13 @@ Unit <usb> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 6
- 257x16-bit dual-port RAM                              : 6
-# Adders/Subtractors                                   : 13
+# RAMs                                                 : 10
+ 257x16-bit dual-port RAM                              : 10
+# Adders/Subtractors                                   : 26
  10-bit subtractor                                     : 1
- 16-bit adder                                          : 4
- 9-bit adder                                           : 7
+ 16-bit adder                                          : 8
+ 16-bit subtractor                                     : 6
+ 9-bit adder                                           : 10
  9-bit subtractor                                      : 1
 # Registers                                            : 12
  1-bit register                                        : 6
@@ -237,9 +251,9 @@ Macro Statistics
  32-bit comparator greater                             : 1
  9-bit comparator equal                                : 1
  9-bit comparator not equal                            : 1
-# Multiplexers                                         : 27
- 1-bit 2-to-1 multiplexer                              : 13
- 16-bit 2-to-1 multiplexer                             : 4
+# Multiplexers                                         : 37
+ 1-bit 2-to-1 multiplexer                              : 19
+ 16-bit 2-to-1 multiplexer                             : 8
  9-bit 2-to-1 multiplexer                              : 10
 # Tristates                                            : 16
  1-bit tristate buffer                                 : 16
@@ -254,8 +268,12 @@ Macro Statistics
 WARNING:Xst:1293 - FF/Latch <usb_addr_0> has a constant value of 0 in block <u_usb>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <usb>.
+	The following adders/subtractors are grouped into adder tree <Msub_cal_count[8]_cal_count[8]_sub_67_OUT1> :
+ 	<Madd_n0291> in block <usb>, 	<Madd_cal_count[8]_cal_count[8]_add_57_OUT> in block <usb>, 	<Msub_cal_count[8]_cal_count[8]_sub_61_OUT> in block <usb>, 	<Msub_cal_count[8]_cal_count[8]_sub_64_OUT> in block <usb>, 	<Msub_cal_count[8]_cal_count[8]_sub_67_OUT> in block <usb>.
+	The following adders/subtractors are grouped into adder tree <Msub_cal_count[8]_cal_count[8]_sub_85_OUT1> :
+ 	<Msub_n0296> in block <usb>, 	<Madd_cal_count[8]_cal_count[8]_add_75_OUT> in block <usb>, 	<Msub_n0301> in block <usb>, 	<Madd_cal_count[8]_cal_count[8]_add_81_OUT> in block <usb>, 	<Msub_cal_count[8]_cal_count[8]_sub_85_OUT> in block <usb>.
 	The following adders/subtractors are grouped into adder tree <Madd_cal_count[8]_cal_count[8]_add_48_OUT1> :
- 	<Madd_n0198> in block <usb>, 	<Madd_n0203> in block <usb>, 	<Madd_n0208> in block <usb>, 	<Madd_cal_count[8]_cal_count[8]_add_48_OUT> in block <usb>.
+ 	<Madd_n0273> in block <usb>, 	<Madd_n0278> in block <usb>, 	<Madd_n0283> in block <usb>, 	<Madd_cal_count[8]_cal_count[8]_add_48_OUT> in block <usb>.
 INFO:Xst:3226 - The RAM <Mram_buff> will be implemented as a BLOCK RAM, absorbing the following register(s): <cal_count>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
@@ -274,7 +292,7 @@ INFO:Xst:3226 - The RAM <Mram_buff> will be implemented as a BLOCK RAM, absorbin
     |     aspect ratio   | 257-word x 16-bit                   |          |
     |     mode           | write-first                         |          |
     |     clkB           | connected to signal <i_usb_ifclk>   | rise     |
-    |     addrB          | connected to signal <state[2]_GND_2_o_wide_mux_74_OUT> |          |
+    |     addrB          | connected to signal <state[2]_GND_2_o_wide_mux_114_OUT> |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
@@ -289,7 +307,7 @@ INFO:Xst:3226 - The RAM <Mram_out_buff> will be implemented as a BLOCK RAM, abso
     |     clkA           | connected to signal <i_usb_ifclk>   | rise     |
     |     weA            | connected to internal node          | high     |
     |     addrA          | connected to signal <out_number>    |          |
-    |     diA            | connected to signal <_n0451>        |          |
+    |     diA            | connected to signal <_n0593>        |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
@@ -297,7 +315,7 @@ INFO:Xst:3226 - The RAM <Mram_out_buff> will be implemented as a BLOCK RAM, abso
     |     aspect ratio   | 257-word x 16-bit                   |          |
     |     mode           | write-first                         |          |
     |     clkB           | connected to signal <i_usb_ifclk>   | rise     |
-    |     addrB          | connected to signal <state[2]_GND_2_o_wide_mux_71_OUT> |          |
+    |     addrB          | connected to signal <state[2]_GND_2_o_wide_mux_111_OUT> |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
@@ -366,30 +384,95 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buff4> will be implemented on LUTs e
     |     addrB          | connected to signal <cal_count[8]_GND_2_o_add_46_OUT> |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buff5> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 257-word x 16-bit                   |          |
+    |     clkA           | connected to signal <i_usb_ifclk>   | rise     |
+    |     weA            | connected to signal <usb_slrd_i_usb_flaga_AND_1_o_5> | high     |
+    |     addrA          | connected to signal <counter>       |          |
+    |     diA            | connected to signal <io_usb_data>   |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 257-word x 16-bit                   |          |
+    |     addrB          | connected to signal <cal_count[8]_GND_2_o_add_52_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buff6> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 257-word x 16-bit                   |          |
+    |     clkA           | connected to signal <i_usb_ifclk>   | rise     |
+    |     weA            | connected to signal <usb_slrd_i_usb_flaga_AND_1_o_6> | high     |
+    |     addrA          | connected to signal <counter>       |          |
+    |     diA            | connected to signal <io_usb_data>   |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 257-word x 16-bit                   |          |
+    |     addrB          | connected to signal <cal_count[8]_GND_2_o_add_61_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buff7> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 257-word x 16-bit                   |          |
+    |     clkA           | connected to signal <i_usb_ifclk>   | rise     |
+    |     weA            | connected to signal <usb_slrd_i_usb_flaga_AND_1_o_7> | high     |
+    |     addrA          | connected to signal <counter>       |          |
+    |     diA            | connected to signal <io_usb_data>   |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 257-word x 16-bit                   |          |
+    |     addrB          | connected to signal <cal_count[8]_GND_2_o_add_90_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buff8> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 257-word x 16-bit                   |          |
+    |     clkA           | connected to signal <i_usb_ifclk>   | rise     |
+    |     weA            | connected to signal <usb_slrd_i_usb_flaga_AND_1_o_8> | high     |
+    |     addrA          | connected to signal <counter>       |          |
+    |     diA            | connected to signal <io_usb_data>   |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 257-word x 16-bit                   |          |
+    |     addrB          | connected to signal <cal_count[8]_GND_2_o_add_76_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
 Unit <usb> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 6
+# RAMs                                                 : 10
  257x16-bit dual-port block RAM                        : 2
- 257x16-bit dual-port distributed RAM                  : 4
-# Adders/Subtractors                                   : 9
+ 257x16-bit dual-port distributed RAM                  : 8
+# Adders/Subtractors                                   : 12
  10-bit subtractor                                     : 1
- 9-bit adder                                           : 7
+ 9-bit adder                                           : 10
  9-bit subtractor                                      : 1
-# Adder Trees                                          : 1
+# Adder Trees                                          : 3
  16-bit / 5-inputs adder tree                          : 1
+ 16-bit / 6-inputs adder tree                          : 2
 # Registers                                            : 60
  Flip-Flops                                            : 60
 # Comparators                                          : 3
  32-bit comparator greater                             : 1
  9-bit comparator equal                                : 1
  9-bit comparator not equal                            : 1
-# Multiplexers                                         : 27
- 1-bit 2-to-1 multiplexer                              : 13
- 16-bit 2-to-1 multiplexer                             : 4
+# Multiplexers                                         : 37
+ 1-bit 2-to-1 multiplexer                              : 19
+ 16-bit 2-to-1 multiplexer                             : 8
  9-bit 2-to-1 multiplexer                              : 10
 # FSMs                                                 : 2
 
@@ -400,7 +483,7 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1293 - FF/Latch <usb_addr_0> has a constant value of 0 in block <usb>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <u_usb/FSM_0> on signal <state[1:3]> with user encoding.
+Optimizing FSM <u_usb/FSM_1> on signal <state[1:3]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -412,27 +495,30 @@ Optimizing FSM <u_usb/FSM_0> on signal <state[1:3]> with user encoding.
  011   | 011
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <u_usb/FSM_1> on signal <itr[1:1]> with sequential encoding.
+Optimizing FSM <u_usb/FSM_0> on signal <itr[1:2]> with sequential encoding.
 -------------------
  State | Encoding
 -------------------
- 00000 | 0
- 00001 | 1
+ 00000 | 00
+ 00001 | 01
+ 00010 | 10
+ 00011 | 11
 -------------------
 
 Optimizing unit <fpga> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block fpga, actual ratio is 7.
-FlipFlop u_usb/cal_count_0 has been replicated 2 time(s)
-FlipFlop u_usb/cal_count_1 has been replicated 3 time(s)
-FlipFlop u_usb/cal_count_2 has been replicated 3 time(s)
-FlipFlop u_usb/cal_count_3 has been replicated 1 time(s)
-FlipFlop u_usb/cal_count_4 has been replicated 1 time(s)
-FlipFlop u_usb/cal_count_6 has been replicated 2 time(s)
-FlipFlop u_usb/cal_count_7 has been replicated 2 time(s)
-FlipFlop u_usb/cal_count_8 has been replicated 2 time(s)
+Found area constraint ratio of 100 (+ 5) on block fpga, actual ratio is 15.
+FlipFlop u_usb/cal_count_0 has been replicated 5 time(s)
+FlipFlop u_usb/cal_count_1 has been replicated 5 time(s)
+FlipFlop u_usb/cal_count_2 has been replicated 4 time(s)
+FlipFlop u_usb/cal_count_3 has been replicated 4 time(s)
+FlipFlop u_usb/cal_count_4 has been replicated 4 time(s)
+FlipFlop u_usb/cal_count_5 has been replicated 2 time(s)
+FlipFlop u_usb/cal_count_6 has been replicated 6 time(s)
+FlipFlop u_usb/cal_count_7 has been replicated 8 time(s)
+FlipFlop u_usb/cal_count_8 has been replicated 7 time(s)
 
 Final Macro Processing ...
 
@@ -440,8 +526,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 79
- Flip-Flops                                            : 79
+# Registers                                            : 109
+ Flip-Flops                                            : 109
 
 =========================================================================
 
@@ -464,25 +550,25 @@ Top Level Output File Name         : fpga.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 524
+# BELS                             : 1163
 #      GND                         : 1
-#      INV                         : 8
-#      LUT2                        : 15
-#      LUT3                        : 88
-#      LUT4                        : 78
-#      LUT5                        : 140
-#      LUT6                        : 117
-#      MUXCY                       : 37
-#      MUXF7                       : 7
+#      INV                         : 11
+#      LUT2                        : 53
+#      LUT3                        : 159
+#      LUT4                        : 157
+#      LUT5                        : 278
+#      LUT6                        : 233
+#      MUXCY                       : 126
+#      MUXF7                       : 16
 #      VCC                         : 1
-#      XORCY                       : 32
-# FlipFlops/Latches                : 79
-#      FD                          : 4
-#      FDE                         : 75
-# RAMS                             : 162
-#      RAM16X1D                    : 64
-#      RAM64M                      : 80
-#      RAM64X1D                    : 16
+#      XORCY                       : 128
+# FlipFlops/Latches                : 109
+#      FD                          : 5
+#      FDE                         : 104
+# RAMS                             : 322
+#      RAM16X1D                    : 128
+#      RAM64M                      : 160
+#      RAM64X1D                    : 32
 #      RAMB8BWER                   : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -498,17 +584,17 @@ Selected Device : 6slx16ftg256-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              79  out of  18224     0%  
- Number of Slice LUTs:                  926  out of   9112    10%  
-    Number used as Logic:               446  out of   9112     4%  
-    Number used as Memory:              480  out of   2176    22%  
-       Number used as RAM:              480
+ Number of Slice Registers:             109  out of  18224     0%  
+ Number of Slice LUTs:                 1851  out of   9112    20%  
+    Number used as Logic:               891  out of   9112     9%  
+    Number used as Memory:              960  out of   2176    44%  
+       Number used as RAM:              960
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    942
-   Number with an unused Flip Flop:     863  out of    942    91%  
-   Number with an unused LUT:            16  out of    942     1%  
-   Number of fully used LUT-FF pairs:    63  out of    942     6%  
+ Number of LUT Flip Flop pairs used:   1884
+   Number with an unused Flip Flop:    1775  out of   1884    94%  
+   Number with an unused LUT:            33  out of   1884     1%  
+   Number of fully used LUT-FF pairs:    76  out of   1884     4%  
    Number of unique control sets:        10
 
 IO Utilization: 
@@ -541,7 +627,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-USB_IFCLK                          | BUFGP                  | 241   |
+USB_IFCLK                          | BUFGP                  | 431   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -552,8 +638,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 12.518ns (Maximum Frequency: 79.883MHz)
-   Minimum input arrival time before clock: 6.361ns
+   Minimum period: 12.775ns (Maximum Frequency: 78.275MHz)
+   Minimum input arrival time before clock: 6.561ns
    Maximum output required time after clock: 5.598ns
    Maximum combinational path delay: 5.149ns
 
@@ -563,68 +649,69 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'USB_IFCLK'
-  Clock period: 12.518ns (frequency: 79.883MHz)
-  Total number of paths / destination ports: 540432 / 1554
+  Clock period: 12.775ns (frequency: 78.275MHz)
+  Total number of paths / destination ports: 1973328 / 2957
 -------------------------------------------------------------------------
-Delay:               12.518ns (Levels of Logic = 22)
-  Source:            u_usb/cal_count_5 (FF)
+Delay:               12.775ns (Levels of Logic = 24)
+  Source:            u_usb/cal_count_2_2 (FF)
   Destination:       u_usb/Mram_out_buff (RAM)
   Source Clock:      USB_IFCLK rising
   Destination Clock: USB_IFCLK rising
 
-  Data Path: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Data Path: u_usb/cal_count_2_2 to u_usb/Mram_out_buff
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             17   0.525   1.209  u_usb/cal_count_5 (u_usb/cal_count_5)
-     LUT4:I3->O            7   0.254   0.910  u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_cy<5>11 (u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_cy<5>)
-     LUT4:I3->O           14   0.254   1.355  u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<8>11 (u_usb/cal_count[8]_GND_2_o_add_40_OUT<8>)
-     LUT6:I3->O            1   0.235   0.682  u_usb/inst_LPM_MUX3218_SW0 (N84)
-     LUT5:I4->O            3   0.254   0.766  u_usb/inst_LPM_MUX3218 (u_usb/n0199<2>)
-     LUT3:I2->O            1   0.254   0.682  u_usb/ADDERTREE_INTERNAL_Madd12 (u_usb/ADDERTREE_INTERNAL_Madd12)
-     LUT4:I3->O            1   0.254   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>3 (u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>3)
-     MUXCY:S->O            1   0.215   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_2 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>3)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_3 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>4)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_4 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>5)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_5 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>6)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>7)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_7 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>8)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_8 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>9)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_9 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>10)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_10 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>11)
-     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_11 (u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>12)
-     XORCY:CI->O           2   0.206   0.726  u_usb/ADDERTREE_INTERNAL_Madd1_xor<0>_12 (u_usb/ADDERTREE_INTERNAL_Madd_131)
-     LUT3:I2->O            1   0.254   0.682  u_usb/ADDERTREE_INTERNAL_Madd313 (u_usb/ADDERTREE_INTERNAL_Madd313)
-     LUT4:I3->O            1   0.254   0.000  u_usb/ADDERTREE_INTERNAL_Madd3_lut<0>14 (u_usb/ADDERTREE_INTERNAL_Madd3_lut<0>14)
-     MUXCY:S->O            0   0.215   0.000  u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_13 (u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>14)
-     XORCY:CI->O           1   0.206   0.682  u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14 (u_usb/ADDERTREE_INTERNAL_Madd_153)
-     LUT5:I4->O            1   0.254   0.681  u_usb/_n0451<1>1 (u_usb/_n0451<1>)
+     FDE:C->Q             15   0.525   1.155  u_usb/cal_count_2_2 (u_usb/cal_count_2_2)
+     LUT4:I3->O            6   0.254   0.876  u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_cy<5>11 (u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_cy<5>)
+     LUT4:I3->O           16   0.254   1.410  u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<8>11 (u_usb/cal_count[8]_GND_2_o_add_40_OUT<8>)
+     LUT6:I3->O            1   0.235   0.682  u_usb/inst_LPM_MUX1617_SW0 (N178)
+     LUT5:I4->O            3   0.254   0.766  u_usb/inst_LPM_MUX1617 (u_usb/n0274<1>)
+     LUT3:I2->O            1   0.254   0.682  u_usb/ADDERTREE_INTERNAL_Madd119 (u_usb/ADDERTREE_INTERNAL_Madd117)
+     LUT4:I3->O            1   0.254   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_lut<0>2 (u_usb/ADDERTREE_INTERNAL_Madd11_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_1 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>2)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_2 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>3)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_3 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>4)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_4 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>5)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_5 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>6)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_6 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>7)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_7 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>8)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_8 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>9)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_9 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>10)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>11)
+     MUXCY:CI->O           1   0.023   0.000  u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_11 (u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>12)
+     XORCY:CI->O           2   0.206   0.726  u_usb/ADDERTREE_INTERNAL_Madd11_xor<0>_12 (u_usb/ADDERTREE_INTERNAL_Madd_1311)
+     LUT3:I2->O            1   0.254   0.682  u_usb/ADDERTREE_INTERNAL_Madd1313 (u_usb/ADDERTREE_INTERNAL_Madd1314)
+     LUT4:I3->O            1   0.254   0.000  u_usb/ADDERTREE_INTERNAL_Madd13_lut<0>14 (u_usb/ADDERTREE_INTERNAL_Madd13_lut<0>14)
+     MUXCY:S->O            0   0.215   0.000  u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>_13 (u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>14)
+     XORCY:CI->O           1   0.206   0.790  u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14 (u_usb/ADDERTREE_INTERNAL_Madd_1513)
+     LUT6:I4->O            1   0.250   0.000  u_usb/_n0593<1>2_F (N605)
+     MUXF7:I0->O           1   0.163   0.681  u_usb/_n0593<1>2 (u_usb/_n0593<1>)
      RAMB8BWER:DIADI15         0.300          u_usb/Mram_out_buff
     ----------------------------------------
-    Total                     12.518ns (4.143ns logic, 8.375ns route)
-                                       (33.1% logic, 66.9% route)
+    Total                     12.775ns (4.325ns logic, 8.450ns route)
+                                       (33.9% logic, 66.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'USB_IFCLK'
-  Total number of paths / destination ports: 558 / 538
+  Total number of paths / destination ports: 1038 / 1018
 -------------------------------------------------------------------------
-Offset:              6.361ns (Levels of Logic = 4)
-  Source:            USB_FLAGD (PAD)
-  Destination:       u_usb/usb_pkend (FF)
+Offset:              6.561ns (Levels of Logic = 3)
+  Source:            USB_FLAGA (PAD)
+  Destination:       u_usb/Mram_buff8293 (RAM)
   Destination Clock: USB_IFCLK rising
 
-  Data Path: USB_FLAGD to u_usb/usb_pkend
+  Data Path: USB_FLAGA to u_usb/Mram_buff8293
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   1.328   1.365  USB_FLAGD_IBUF (LED_3_OBUF)
-     LUT6:I0->O            1   0.254   1.137  u_usb/_n0296_inv5_SW0 (N231)
-     LUT6:I0->O            1   0.254   0.790  u_usb/_n0296_inv5 (u_usb/_n0296_inv6)
-     LUT5:I3->O            1   0.250   0.681  u_usb/_n0296_inv6 (u_usb/_n0296_inv)
-     FDE:CE                    0.302          u_usb/usb_pkend
+     IBUF:I->O             6   1.328   0.876  USB_FLAGA_IBUF (LED_0_OBUF)
+     LUT5:I4->O            7   0.254   1.186  u_usb/usb_slrd_i_usb_flaga_AND_1_o_01 (u_usb/usb_slrd_i_usb_flaga_AND_1_o_0)
+     LUT4:I0->O          128   0.254   2.294  u_usb/write_ctrl39 (u_usb/write_ctrl14)
+     RAM16X1D:WE               0.369          u_usb/Mram_buff330
     ----------------------------------------
-    Total                      6.361ns (2.388ns logic, 3.973ns route)
-                                       (37.5% logic, 62.5% route)
+    Total                      6.561ns (2.205ns logic, 4.356ns route)
+                                       (33.6% logic, 66.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'USB_IFCLK'
@@ -674,20 +761,20 @@ Clock to Setup on destination clock USB_IFCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-USB_IFCLK      |   12.518|         |         |         |
+USB_IFCLK      |   12.775|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.25 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.18 secs
  
 --> 
 
-Total memory usage is 4524352 kilobytes
+Total memory usage is 4525432 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    6 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 

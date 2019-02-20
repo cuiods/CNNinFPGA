@@ -29,19 +29,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_CLOCK_USB = PERIOD TIMEGRP "USB_IFCLK" 48 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1723900 paths analyzed, 3491 endpoints analyzed, 0 failing endpoints
+ 6157237 paths analyzed, 6653 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  16.029ns.
+ Minimum period is  18.476ns.
 --------------------------------------------------------------------------------
 
-Paths for end point u_usb/Mram_out_buff (RAMB8_X0Y6.DIADI12), 197260 paths
+Paths for end point u_usb/Mram_out_buff (RAMB8_X0Y4.DIADI13), 825755 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     4.804ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_5 (FF)
+Slack (setup path):     2.357ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      16.004ns (Levels of Logic = 10)
-  Clock Path Skew:      0.010ns (0.461 - 0.451)
+  Data Path Delay:      18.459ns (Levels of Logic = 9)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -52,60 +52,56 @@ Slack (setup path):     4.804ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y7.AQ       Tcko                  0.525   u_usb/cal_count_8_2
-                                                       u_usb/cal_count_5
-    SLICE_X19Y7.A2       net (fanout=16)       1.405   u_usb/cal_count<5>
-    SLICE_X19Y7.A        Tilo                  0.259   u_usb/inst_LPM_MUX1012
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>11
-    SLICE_X14Y5.A4       net (fanout=26)       1.292   u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>
-    SLICE_X14Y5.A        Tilo                  0.254   u_usb/n0194<12>
-                                                       u_usb/inst_LPM_MUX10141
-    SLICE_X34Y4.B3       net (fanout=16)       2.253   u_usb/inst_LPM_MUX1014
-    SLICE_X34Y4.B        Tilo                  0.254   N209
-                                                       u_usb/inst_LPM_MUX511
-    SLICE_X24Y10.B1      net (fanout=1)        1.891   u_usb/n0194<5>
-    SLICE_X24Y10.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6
-    SLICE_X24Y11.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>7
-    SLICE_X24Y11.AQ      Tito_logic            0.684   u_usb/ADDERTREE_INTERNAL_Madd_111
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_81_rt
-    SLICE_X20Y14.A4      net (fanout=1)        0.744   u_usb/ADDERTREE_INTERNAL_Madd_81
-    SLICE_X20Y14.AMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd38
-    SLICE_X20Y14.B3      net (fanout=2)        0.697   u_usb/ADDERTREE_INTERNAL_Madd38
-    SLICE_X20Y14.COUT    Topcyb                0.448   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_lut<0>9
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_10
-    SLICE_X20Y15.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>11
-    SLICE_X20Y15.AQ      Tito_logic            0.684   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_123_rt
-    SLICE_X18Y19.C4      net (fanout=1)        0.789   u_usb/ADDERTREE_INTERNAL_Madd_123
-    SLICE_X18Y19.C       Tilo                  0.255   u_usb/_n0451<4>
-                                                       u_usb/_n0451<4>1
-    RAMB8_X0Y6.DIADI12   net (fanout=1)        1.888   u_usb/_n0451<4>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y40.C6       net (fanout=64)       3.820   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y40.C        Tilo                  0.255   u_usb/Mram_buff212_RAMD_O
+                                                       u_usb/Mram_buff212_RAMC
+    SLICE_X2Y40.A1       net (fanout=1)        1.214   u_usb/N243
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.CQ       Tito_logic            0.854   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1011_rt
+    SLICE_X6Y12.C2       net (fanout=1)        1.163   u_usb/ADDERTREE_INTERNAL_Madd_1011
+    SLICE_X6Y12.CMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1310
+    SLICE_X6Y12.DX       net (fanout=2)        0.706   u_usb/ADDERTREE_INTERNAL_Madd1311
+    SLICE_X6Y12.COUT     Tdxcy                 0.109   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>_10
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>11
+    SLICE_X6Y13.BQ       Tito_logic            0.788   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1313_rt
+    SLICE_X4Y13.D1       net (fanout=1)        0.756   u_usb/ADDERTREE_INTERNAL_Madd_1313
+    SLICE_X4Y13.CMUX     Topdc                 0.402   N353
+                                                       u_usb/_n0593<3>2_F
+                                                       u_usb/_n0593<3>2
+    RAMB8_X0Y4.DIADI13   net (fanout=1)        1.294   u_usb/_n0593<3>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     16.004ns (4.584ns logic, 11.420ns route)
-                                                       (28.6% logic, 71.4% route)
+    Total                                     18.459ns (4.303ns logic, 14.156ns route)
+                                                       (23.3% logic, 76.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.862ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_5 (FF)
+Slack (setup path):     2.374ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      15.946ns (Levels of Logic = 10)
-  Clock Path Skew:      0.010ns (0.461 - 0.451)
+  Data Path Delay:      18.442ns (Levels of Logic = 10)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -116,60 +112,59 @@ Slack (setup path):     4.862ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y7.AQ       Tcko                  0.525   u_usb/cal_count_8_2
-                                                       u_usb/cal_count_5
-    SLICE_X19Y7.A2       net (fanout=16)       1.405   u_usb/cal_count<5>
-    SLICE_X19Y7.A        Tilo                  0.259   u_usb/inst_LPM_MUX1012
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>11
-    SLICE_X14Y5.A4       net (fanout=26)       1.292   u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>
-    SLICE_X14Y5.A        Tilo                  0.254   u_usb/n0194<12>
-                                                       u_usb/inst_LPM_MUX10141
-    SLICE_X34Y4.B3       net (fanout=16)       2.253   u_usb/inst_LPM_MUX1014
-    SLICE_X34Y4.B        Tilo                  0.254   N209
-                                                       u_usb/inst_LPM_MUX511
-    SLICE_X24Y10.B1      net (fanout=1)        1.891   u_usb/n0194<5>
-    SLICE_X24Y10.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6
-    SLICE_X24Y11.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>7
-    SLICE_X24Y11.BQ      Tito_logic            0.751   u_usb/ADDERTREE_INTERNAL_Madd_111
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_91_rt
-    SLICE_X20Y14.B4      net (fanout=1)        0.984   u_usb/ADDERTREE_INTERNAL_Madd_91
-    SLICE_X20Y14.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd39
-    SLICE_X20Y14.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd39
-    SLICE_X20Y14.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_lut<0>10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_10
-    SLICE_X20Y15.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>11
-    SLICE_X20Y15.AQ      Tito_logic            0.684   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_123_rt
-    SLICE_X18Y19.C4      net (fanout=1)        0.789   u_usb/ADDERTREE_INTERNAL_Madd_123
-    SLICE_X18Y19.C       Tilo                  0.255   u_usb/_n0451<4>
-                                                       u_usb/_n0451<4>1
-    RAMB8_X0Y6.DIADI12   net (fanout=1)        1.888   u_usb/_n0451<4>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y41.C6       net (fanout=64)       3.544   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y41.C        Tilo                  0.255   u_usb/Mram_buff210_RAMD_O
+                                                       u_usb/Mram_buff210_RAMC
+    SLICE_X2Y40.B4       net (fanout=1)        0.972   u_usb/N231
+    SLICE_X2Y40.B        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114_SW0
+    SLICE_X2Y40.A5       net (fanout=1)        0.247   N192
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.CQ       Tito_logic            0.854   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1011_rt
+    SLICE_X6Y12.C2       net (fanout=1)        1.163   u_usb/ADDERTREE_INTERNAL_Madd_1011
+    SLICE_X6Y12.CMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1310
+    SLICE_X6Y12.DX       net (fanout=2)        0.706   u_usb/ADDERTREE_INTERNAL_Madd1311
+    SLICE_X6Y12.COUT     Tdxcy                 0.109   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>_10
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>11
+    SLICE_X6Y13.BQ       Tito_logic            0.788   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1313_rt
+    SLICE_X4Y13.D1       net (fanout=1)        0.756   u_usb/ADDERTREE_INTERNAL_Madd_1313
+    SLICE_X4Y13.CMUX     Topdc                 0.402   N353
+                                                       u_usb/_n0593<3>2_F
+                                                       u_usb/_n0593<3>2
+    RAMB8_X0Y4.DIADI13   net (fanout=1)        1.294   u_usb/_n0593<3>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     15.946ns (4.528ns logic, 11.418ns route)
-                                                       (28.4% logic, 71.6% route)
+    Total                                     18.442ns (4.557ns logic, 13.885ns route)
+                                                       (24.7% logic, 75.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.941ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_5 (FF)
+Slack (setup path):     2.468ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      15.867ns (Levels of Logic = 9)
-  Clock Path Skew:      0.010ns (0.461 - 0.451)
+  Data Path Delay:      18.348ns (Levels of Logic = 9)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -180,59 +175,60 @@ Slack (setup path):     4.941ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y7.AQ       Tcko                  0.525   u_usb/cal_count_8_2
-                                                       u_usb/cal_count_5
-    SLICE_X19Y7.A2       net (fanout=16)       1.405   u_usb/cal_count<5>
-    SLICE_X19Y7.A        Tilo                  0.259   u_usb/inst_LPM_MUX1012
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>11
-    SLICE_X14Y5.A4       net (fanout=26)       1.292   u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>
-    SLICE_X14Y5.A        Tilo                  0.254   u_usb/n0194<12>
-                                                       u_usb/inst_LPM_MUX10141
-    SLICE_X34Y4.B3       net (fanout=16)       2.253   u_usb/inst_LPM_MUX1014
-    SLICE_X34Y4.B        Tilo                  0.254   N209
-                                                       u_usb/inst_LPM_MUX511
-    SLICE_X24Y10.B1      net (fanout=1)        1.891   u_usb/n0194<5>
-    SLICE_X24Y10.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.DQ      Tad_logic             0.967   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_71_rt
-    SLICE_X20Y13.D3      net (fanout=1)        0.839   u_usb/ADDERTREE_INTERNAL_Madd_71
-    SLICE_X20Y13.DMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_73
-                                                       u_usb/ADDERTREE_INTERNAL_Madd37
-    SLICE_X20Y14.AX      net (fanout=2)        0.677   u_usb/ADDERTREE_INTERNAL_Madd37
-    SLICE_X20Y14.COUT    Taxcy                 0.281   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_10
-    SLICE_X20Y15.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>11
-    SLICE_X20Y15.AQ      Tito_logic            0.684   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_123_rt
-    SLICE_X18Y19.C4      net (fanout=1)        0.789   u_usb/ADDERTREE_INTERNAL_Madd_123
-    SLICE_X18Y19.C       Tilo                  0.255   u_usb/_n0451<4>
-                                                       u_usb/_n0451<4>1
-    RAMB8_X0Y6.DIADI12   net (fanout=1)        1.888   u_usb/_n0451<4>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y40.C6       net (fanout=64)       3.820   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y40.C        Tilo                  0.255   u_usb/Mram_buff212_RAMD_O
+                                                       u_usb/Mram_buff212_RAMC
+    SLICE_X2Y40.A1       net (fanout=1)        1.214   u_usb/N243
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.B4       net (fanout=2)        0.340   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.CQ       Tad_logic             1.128   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_lut<0>9
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1011_rt
+    SLICE_X6Y12.C2       net (fanout=1)        1.163   u_usb/ADDERTREE_INTERNAL_Madd_1011
+    SLICE_X6Y12.CMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1310
+    SLICE_X6Y12.DX       net (fanout=2)        0.706   u_usb/ADDERTREE_INTERNAL_Madd1311
+    SLICE_X6Y12.COUT     Tdxcy                 0.109   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>_10
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>11
+    SLICE_X6Y13.BQ       Tito_logic            0.788   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1313_rt
+    SLICE_X4Y13.D1       net (fanout=1)        0.756   u_usb/ADDERTREE_INTERNAL_Madd_1313
+    SLICE_X4Y13.CMUX     Topdc                 0.402   N353
+                                                       u_usb/_n0593<3>2_F
+                                                       u_usb/_n0593<3>2
+    RAMB8_X0Y4.DIADI13   net (fanout=1)        1.294   u_usb/_n0593<3>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     15.867ns (4.375ns logic, 11.492ns route)
-                                                       (27.6% logic, 72.4% route)
+    Total                                     18.348ns (4.577ns logic, 13.771ns route)
+                                                       (24.9% logic, 75.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point u_usb/Mram_out_buff (RAMB8_X0Y6.DIADI13), 228982 paths
+Paths for end point u_usb/Mram_out_buff (RAMB8_X0Y4.DIADI12), 706771 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     4.919ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_5 (FF)
+Slack (setup path):     2.494ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      15.889ns (Levels of Logic = 10)
-  Clock Path Skew:      0.010ns (0.461 - 0.451)
+  Data Path Delay:      18.322ns (Levels of Logic = 9)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -243,60 +239,56 @@ Slack (setup path):     4.919ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y7.AQ       Tcko                  0.525   u_usb/cal_count_8_2
-                                                       u_usb/cal_count_5
-    SLICE_X19Y7.A2       net (fanout=16)       1.405   u_usb/cal_count<5>
-    SLICE_X19Y7.A        Tilo                  0.259   u_usb/inst_LPM_MUX1012
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>11
-    SLICE_X14Y5.A4       net (fanout=26)       1.292   u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>
-    SLICE_X14Y5.A        Tilo                  0.254   u_usb/n0194<12>
-                                                       u_usb/inst_LPM_MUX10141
-    SLICE_X34Y4.B3       net (fanout=16)       2.253   u_usb/inst_LPM_MUX1014
-    SLICE_X34Y4.B        Tilo                  0.254   N209
-                                                       u_usb/inst_LPM_MUX511
-    SLICE_X24Y10.B1      net (fanout=1)        1.891   u_usb/n0194<5>
-    SLICE_X24Y10.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6
-    SLICE_X24Y11.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>7
-    SLICE_X24Y11.AQ      Tito_logic            0.684   u_usb/ADDERTREE_INTERNAL_Madd_111
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_81_rt
-    SLICE_X20Y14.A4      net (fanout=1)        0.744   u_usb/ADDERTREE_INTERNAL_Madd_81
-    SLICE_X20Y14.AMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd38
-    SLICE_X20Y14.B3      net (fanout=2)        0.697   u_usb/ADDERTREE_INTERNAL_Madd38
-    SLICE_X20Y14.COUT    Topcyb                0.448   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_lut<0>9
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_10
-    SLICE_X20Y15.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>11
-    SLICE_X20Y15.BQ      Tito_logic            0.751   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_133_rt
-    SLICE_X20Y18.C4      net (fanout=1)        0.773   u_usb/ADDERTREE_INTERNAL_Madd_133
-    SLICE_X20Y18.C       Tilo                  0.235   u_usb/_n0451<3>
-                                                       u_usb/_n0451<3>1
-    RAMB8_X0Y6.DIADI13   net (fanout=1)        1.742   u_usb/_n0451<3>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y40.C6       net (fanout=64)       3.820   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y40.C        Tilo                  0.255   u_usb/Mram_buff212_RAMD_O
+                                                       u_usb/Mram_buff212_RAMC
+    SLICE_X2Y40.A1       net (fanout=1)        1.214   u_usb/N243
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.CQ       Tito_logic            0.854   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1011_rt
+    SLICE_X6Y12.C2       net (fanout=1)        1.163   u_usb/ADDERTREE_INTERNAL_Madd_1011
+    SLICE_X6Y12.CMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1310
+    SLICE_X6Y12.DX       net (fanout=2)        0.706   u_usb/ADDERTREE_INTERNAL_Madd1311
+    SLICE_X6Y12.COUT     Tdxcy                 0.109   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>_10
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>11
+    SLICE_X6Y13.AQ       Tito_logic            0.698   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1214_rt
+    SLICE_X8Y12.D5       net (fanout=1)        0.766   u_usb/ADDERTREE_INTERNAL_Madd_1214
+    SLICE_X8Y12.CMUX     Topdc                 0.402   N357
+                                                       u_usb/_n0593<4>2_F
+                                                       u_usb/_n0593<4>2
+    RAMB8_X0Y4.DIADI12   net (fanout=1)        1.237   u_usb/_n0593<4>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     15.889ns (4.631ns logic, 11.258ns route)
-                                                       (29.1% logic, 70.9% route)
+    Total                                     18.322ns (4.213ns logic, 14.109ns route)
+                                                       (23.0% logic, 77.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.977ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_5 (FF)
+Slack (setup path):     2.511ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      15.831ns (Levels of Logic = 10)
-  Clock Path Skew:      0.010ns (0.461 - 0.451)
+  Data Path Delay:      18.305ns (Levels of Logic = 10)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -307,60 +299,59 @@ Slack (setup path):     4.977ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y7.AQ       Tcko                  0.525   u_usb/cal_count_8_2
-                                                       u_usb/cal_count_5
-    SLICE_X19Y7.A2       net (fanout=16)       1.405   u_usb/cal_count<5>
-    SLICE_X19Y7.A        Tilo                  0.259   u_usb/inst_LPM_MUX1012
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>11
-    SLICE_X14Y5.A4       net (fanout=26)       1.292   u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>
-    SLICE_X14Y5.A        Tilo                  0.254   u_usb/n0194<12>
-                                                       u_usb/inst_LPM_MUX10141
-    SLICE_X34Y4.B3       net (fanout=16)       2.253   u_usb/inst_LPM_MUX1014
-    SLICE_X34Y4.B        Tilo                  0.254   N209
-                                                       u_usb/inst_LPM_MUX511
-    SLICE_X24Y10.B1      net (fanout=1)        1.891   u_usb/n0194<5>
-    SLICE_X24Y10.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6
-    SLICE_X24Y11.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>7
-    SLICE_X24Y11.BQ      Tito_logic            0.751   u_usb/ADDERTREE_INTERNAL_Madd_111
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_91_rt
-    SLICE_X20Y14.B4      net (fanout=1)        0.984   u_usb/ADDERTREE_INTERNAL_Madd_91
-    SLICE_X20Y14.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd39
-    SLICE_X20Y14.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd39
-    SLICE_X20Y14.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_lut<0>10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_10
-    SLICE_X20Y15.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>11
-    SLICE_X20Y15.BQ      Tito_logic            0.751   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_133_rt
-    SLICE_X20Y18.C4      net (fanout=1)        0.773   u_usb/ADDERTREE_INTERNAL_Madd_133
-    SLICE_X20Y18.C       Tilo                  0.235   u_usb/_n0451<3>
-                                                       u_usb/_n0451<3>1
-    RAMB8_X0Y6.DIADI13   net (fanout=1)        1.742   u_usb/_n0451<3>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y41.C6       net (fanout=64)       3.544   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y41.C        Tilo                  0.255   u_usb/Mram_buff210_RAMD_O
+                                                       u_usb/Mram_buff210_RAMC
+    SLICE_X2Y40.B4       net (fanout=1)        0.972   u_usb/N231
+    SLICE_X2Y40.B        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114_SW0
+    SLICE_X2Y40.A5       net (fanout=1)        0.247   N192
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.CQ       Tito_logic            0.854   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1011_rt
+    SLICE_X6Y12.C2       net (fanout=1)        1.163   u_usb/ADDERTREE_INTERNAL_Madd_1011
+    SLICE_X6Y12.CMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1310
+    SLICE_X6Y12.DX       net (fanout=2)        0.706   u_usb/ADDERTREE_INTERNAL_Madd1311
+    SLICE_X6Y12.COUT     Tdxcy                 0.109   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>_10
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>11
+    SLICE_X6Y13.AQ       Tito_logic            0.698   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1214_rt
+    SLICE_X8Y12.D5       net (fanout=1)        0.766   u_usb/ADDERTREE_INTERNAL_Madd_1214
+    SLICE_X8Y12.CMUX     Topdc                 0.402   N357
+                                                       u_usb/_n0593<4>2_F
+                                                       u_usb/_n0593<4>2
+    RAMB8_X0Y4.DIADI12   net (fanout=1)        1.237   u_usb/_n0593<4>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     15.831ns (4.575ns logic, 11.256ns route)
-                                                       (28.9% logic, 71.1% route)
+    Total                                     18.305ns (4.467ns logic, 13.838ns route)
+                                                       (24.4% logic, 75.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.056ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_5 (FF)
+Slack (setup path):     2.605ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      15.752ns (Levels of Logic = 9)
-  Clock Path Skew:      0.010ns (0.461 - 0.451)
+  Data Path Delay:      18.211ns (Levels of Logic = 9)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -371,59 +362,60 @@ Slack (setup path):     5.056ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y7.AQ       Tcko                  0.525   u_usb/cal_count_8_2
-                                                       u_usb/cal_count_5
-    SLICE_X19Y7.A2       net (fanout=16)       1.405   u_usb/cal_count<5>
-    SLICE_X19Y7.A        Tilo                  0.259   u_usb/inst_LPM_MUX1012
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>11
-    SLICE_X14Y5.A4       net (fanout=26)       1.292   u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>
-    SLICE_X14Y5.A        Tilo                  0.254   u_usb/n0194<12>
-                                                       u_usb/inst_LPM_MUX10141
-    SLICE_X34Y4.B3       net (fanout=16)       2.253   u_usb/inst_LPM_MUX1014
-    SLICE_X34Y4.B        Tilo                  0.254   N209
-                                                       u_usb/inst_LPM_MUX511
-    SLICE_X24Y10.B1      net (fanout=1)        1.891   u_usb/n0194<5>
-    SLICE_X24Y10.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.DQ      Tad_logic             0.967   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_71_rt
-    SLICE_X20Y13.D3      net (fanout=1)        0.839   u_usb/ADDERTREE_INTERNAL_Madd_71
-    SLICE_X20Y13.DMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_73
-                                                       u_usb/ADDERTREE_INTERNAL_Madd37
-    SLICE_X20Y14.AX      net (fanout=2)        0.677   u_usb/ADDERTREE_INTERNAL_Madd37
-    SLICE_X20Y14.COUT    Taxcy                 0.281   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_10
-    SLICE_X20Y15.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>11
-    SLICE_X20Y15.BQ      Tito_logic            0.751   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_133_rt
-    SLICE_X20Y18.C4      net (fanout=1)        0.773   u_usb/ADDERTREE_INTERNAL_Madd_133
-    SLICE_X20Y18.C       Tilo                  0.235   u_usb/_n0451<3>
-                                                       u_usb/_n0451<3>1
-    RAMB8_X0Y6.DIADI13   net (fanout=1)        1.742   u_usb/_n0451<3>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y40.C6       net (fanout=64)       3.820   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y40.C        Tilo                  0.255   u_usb/Mram_buff212_RAMD_O
+                                                       u_usb/Mram_buff212_RAMC
+    SLICE_X2Y40.A1       net (fanout=1)        1.214   u_usb/N243
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.B4       net (fanout=2)        0.340   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.CQ       Tad_logic             1.128   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_lut<0>9
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1011_rt
+    SLICE_X6Y12.C2       net (fanout=1)        1.163   u_usb/ADDERTREE_INTERNAL_Madd_1011
+    SLICE_X6Y12.CMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1310
+    SLICE_X6Y12.DX       net (fanout=2)        0.706   u_usb/ADDERTREE_INTERNAL_Madd1311
+    SLICE_X6Y12.COUT     Tdxcy                 0.109   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>_10
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>11
+    SLICE_X6Y13.AQ       Tito_logic            0.698   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1214_rt
+    SLICE_X8Y12.D5       net (fanout=1)        0.766   u_usb/ADDERTREE_INTERNAL_Madd_1214
+    SLICE_X8Y12.CMUX     Topdc                 0.402   N357
+                                                       u_usb/_n0593<4>2_F
+                                                       u_usb/_n0593<4>2
+    RAMB8_X0Y4.DIADI12   net (fanout=1)        1.237   u_usb/_n0593<4>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     15.752ns (4.422ns logic, 11.330ns route)
-                                                       (28.1% logic, 71.9% route)
+    Total                                     18.211ns (4.487ns logic, 13.724ns route)
+                                                       (24.6% logic, 75.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point u_usb/Mram_out_buff (RAMB8_X0Y6.DIADI15), 298668 paths
+Paths for end point u_usb/Mram_out_buff (RAMB8_X0Y4.DIADI15), 1086241 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.217ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_5 (FF)
+Slack (setup path):     2.642ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      15.591ns (Levels of Logic = 10)
-  Clock Path Skew:      0.010ns (0.461 - 0.451)
+  Data Path Delay:      18.174ns (Levels of Logic = 9)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -434,59 +426,55 @@ Slack (setup path):     5.217ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y7.AQ       Tcko                  0.525   u_usb/cal_count_8_2
-                                                       u_usb/cal_count_5
-    SLICE_X19Y7.A2       net (fanout=16)       1.405   u_usb/cal_count<5>
-    SLICE_X19Y7.A        Tilo                  0.259   u_usb/inst_LPM_MUX1012
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>11
-    SLICE_X14Y5.A4       net (fanout=26)       1.292   u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>
-    SLICE_X14Y5.A        Tilo                  0.254   u_usb/n0194<12>
-                                                       u_usb/inst_LPM_MUX10141
-    SLICE_X34Y4.B3       net (fanout=16)       2.253   u_usb/inst_LPM_MUX1014
-    SLICE_X34Y4.B        Tilo                  0.254   N209
-                                                       u_usb/inst_LPM_MUX511
-    SLICE_X24Y10.B1      net (fanout=1)        1.891   u_usb/n0194<5>
-    SLICE_X24Y10.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6
-    SLICE_X24Y11.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>7
-    SLICE_X24Y11.AQ      Tito_logic            0.684   u_usb/ADDERTREE_INTERNAL_Madd_111
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_81_rt
-    SLICE_X20Y14.A4      net (fanout=1)        0.744   u_usb/ADDERTREE_INTERNAL_Madd_81
-    SLICE_X20Y14.AMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd38
-    SLICE_X20Y14.B3      net (fanout=2)        0.697   u_usb/ADDERTREE_INTERNAL_Madd38
-    SLICE_X20Y14.COUT    Topcyb                0.448   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_lut<0>9
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_10
-    SLICE_X20Y15.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>11
-    SLICE_X20Y15.DMUX    Tcind                 0.289   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-    SLICE_X20Y20.C4      net (fanout=1)        0.834   u_usb/ADDERTREE_INTERNAL_Madd_153
-    SLICE_X20Y20.C       Tilo                  0.235   N80
-                                                       u_usb/_n0451<1>1
-    RAMB8_X0Y6.DIADI15   net (fanout=1)        1.845   u_usb/_n0451<1>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y40.C6       net (fanout=64)       3.820   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y40.C        Tilo                  0.255   u_usb/Mram_buff212_RAMD_O
+                                                       u_usb/Mram_buff212_RAMC
+    SLICE_X2Y40.A1       net (fanout=1)        1.214   u_usb/N243
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.COUT     Tbxcy                 0.156   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+    SLICE_X2Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>11
+    SLICE_X2Y13.AQ       Tito_logic            0.698   u_usb/ADDERTREE_INTERNAL_Madd_1311
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_xor<0>_14
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1212_rt
+    SLICE_X6Y13.A1       net (fanout=1)        1.218   u_usb/ADDERTREE_INTERNAL_Madd_1212
+    SLICE_X6Y13.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1312
+    SLICE_X6Y13.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1313
+    SLICE_X6Y13.DMUX     Tbxd                  0.403   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+    SLICE_X8Y13.D1       net (fanout=1)        0.860   u_usb/ADDERTREE_INTERNAL_Madd_1513
+    SLICE_X8Y13.CMUX     Topdc                 0.402   N335
+                                                       u_usb/_n0593<1>2_F
+                                                       u_usb/_n0593<1>2
+    RAMB8_X0Y4.DIADI15   net (fanout=1)        1.325   u_usb/_n0593<1>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     15.591ns (4.169ns logic, 11.422ns route)
-                                                       (26.7% logic, 73.3% route)
+    Total                                     18.174ns (3.809ns logic, 14.365ns route)
+                                                       (21.0% logic, 79.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.228ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_1_3 (FF)
+Slack (setup path):     2.659ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      15.586ns (Levels of Logic = 10)
-  Clock Path Skew:      0.016ns (0.461 - 0.445)
+  Data Path Delay:      18.157ns (Levels of Logic = 10)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -497,58 +485,58 @@ Slack (setup path):     5.228ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_1_3 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y7.CQ       Tcko                  0.476   u_usb/cal_count_1_3
-                                                       u_usb/cal_count_1_3
-    SLICE_X27Y9.A1       net (fanout=12)       1.017   u_usb/cal_count_1_3
-    SLICE_X27Y9.A        Tilo                  0.259   u_usb/cal_count[8]_GND_2_o_add_37_OUT<4>
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_xor<4>11
-    SLICE_X22Y1.B5       net (fanout=64)       1.591   u_usb/cal_count[8]_GND_2_o_add_37_OUT<4>
-    SLICE_X22Y1.B        Tilo                  0.254   u_usb/Mram_buff114_RAMD_O
-                                                       u_usb/Mram_buff114_RAMB
-    SLICE_X16Y2.D2       net (fanout=2)        1.380   u_usb/N89
-    SLICE_X16Y2.CMUX     Topdc                 0.402   u_usb/n0194<10>
-                                                       u_usb/inst_LPM_MUX101_SW0_F
-                                                       u_usb/inst_LPM_MUX101_SW0
-    SLICE_X16Y2.A2       net (fanout=1)        0.725   N114
-    SLICE_X16Y2.A        Tilo                  0.235   u_usb/n0194<10>
-                                                       u_usb/inst_LPM_MUX101
-    SLICE_X24Y11.C3      net (fanout=1)        1.482   u_usb/n0194<10>
-    SLICE_X24Y11.CMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_111
-                                                       u_usb/ADDERTREE_INTERNAL_Madd110
-    SLICE_X24Y11.DX      net (fanout=2)        1.348   u_usb/ADDERTREE_INTERNAL_Madd110
-    SLICE_X24Y11.COUT    Tdxcy                 0.121   u_usb/ADDERTREE_INTERNAL_Madd_111
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_10
-    SLICE_X24Y12.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>11
-    SLICE_X24Y12.AQ      Tito_logic            0.684   u_usb/ADDERTREE_INTERNAL_Madd_131
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_xor<0>_14
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_121_rt
-    SLICE_X20Y15.A4      net (fanout=1)        0.744   u_usb/ADDERTREE_INTERNAL_Madd_121
-    SLICE_X20Y15.AMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd312
-    SLICE_X20Y15.BX      net (fanout=2)        0.687   u_usb/ADDERTREE_INTERNAL_Madd312
-    SLICE_X20Y15.DMUX    Tbxd                  0.368   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-    SLICE_X20Y20.C4      net (fanout=1)        0.834   u_usb/ADDERTREE_INTERNAL_Madd_153
-    SLICE_X20Y20.C       Tilo                  0.235   N80
-                                                       u_usb/_n0451<1>1
-    RAMB8_X0Y6.DIADI15   net (fanout=1)        1.845   u_usb/_n0451<1>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y41.C6       net (fanout=64)       3.544   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y41.C        Tilo                  0.255   u_usb/Mram_buff210_RAMD_O
+                                                       u_usb/Mram_buff210_RAMC
+    SLICE_X2Y40.B4       net (fanout=1)        0.972   u_usb/N231
+    SLICE_X2Y40.B        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114_SW0
+    SLICE_X2Y40.A5       net (fanout=1)        0.247   N192
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.COUT     Tbxcy                 0.156   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+    SLICE_X2Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>11
+    SLICE_X2Y13.AQ       Tito_logic            0.698   u_usb/ADDERTREE_INTERNAL_Madd_1311
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_xor<0>_14
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1212_rt
+    SLICE_X6Y13.A1       net (fanout=1)        1.218   u_usb/ADDERTREE_INTERNAL_Madd_1212
+    SLICE_X6Y13.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1312
+    SLICE_X6Y13.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1313
+    SLICE_X6Y13.DMUX     Tbxd                  0.403   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+    SLICE_X8Y13.D1       net (fanout=1)        0.860   u_usb/ADDERTREE_INTERNAL_Madd_1513
+    SLICE_X8Y13.CMUX     Topdc                 0.402   N335
+                                                       u_usb/_n0593<1>2_F
+                                                       u_usb/_n0593<1>2
+    RAMB8_X0Y4.DIADI15   net (fanout=1)        1.325   u_usb/_n0593<1>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     15.586ns (3.930ns logic, 11.656ns route)
-                                                       (25.2% logic, 74.8% route)
+    Total                                     18.157ns (4.063ns logic, 14.094ns route)
+                                                       (22.4% logic, 77.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.275ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_usb/cal_count_5 (FF)
+Slack (setup path):     2.690ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_usb/cal_count_2 (FF)
   Destination:          u_usb/Mram_out_buff (RAM)
   Requirement:          20.833ns
-  Data Path Delay:      15.533ns (Levels of Logic = 10)
-  Clock Path Skew:      0.010ns (0.461 - 0.451)
+  Data Path Delay:      18.126ns (Levels of Logic = 9)
+  Clock Path Skew:      0.018ns (0.452 - 0.434)
   Source Clock:         USB_IFCLK_BUFGP rising at 0.000ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.035ns
@@ -559,135 +547,131 @@ Slack (setup path):     5.275ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: u_usb/cal_count_5 to u_usb/Mram_out_buff
+  Maximum Data Path at Slow Process Corner: u_usb/cal_count_2 to u_usb/Mram_out_buff
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y7.AQ       Tcko                  0.525   u_usb/cal_count_8_2
-                                                       u_usb/cal_count_5
-    SLICE_X19Y7.A2       net (fanout=16)       1.405   u_usb/cal_count<5>
-    SLICE_X19Y7.A        Tilo                  0.259   u_usb/inst_LPM_MUX1012
-                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>11
-    SLICE_X14Y5.A4       net (fanout=26)       1.292   u_usb/Madd_cal_count[8]_GND_2_o_add_37_OUT_cy<5>
-    SLICE_X14Y5.A        Tilo                  0.254   u_usb/n0194<12>
-                                                       u_usb/inst_LPM_MUX10141
-    SLICE_X34Y4.B3       net (fanout=16)       2.253   u_usb/inst_LPM_MUX1014
-    SLICE_X34Y4.B        Tilo                  0.254   N209
-                                                       u_usb/inst_LPM_MUX511
-    SLICE_X24Y10.B1      net (fanout=1)        1.891   u_usb/n0194<5>
-    SLICE_X24Y10.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd15
-    SLICE_X24Y10.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_71
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_lut<0>6
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_6
-    SLICE_X24Y11.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>7
-    SLICE_X24Y11.BQ      Tito_logic            0.751   u_usb/ADDERTREE_INTERNAL_Madd_111
-                                                       u_usb/ADDERTREE_INTERNAL_Madd1_cy<0>_10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd_91_rt
-    SLICE_X20Y14.B4      net (fanout=1)        0.984   u_usb/ADDERTREE_INTERNAL_Madd_91
-    SLICE_X20Y14.BMUX    Tilo                  0.298   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd39
-    SLICE_X20Y14.C5      net (fanout=2)        0.455   u_usb/ADDERTREE_INTERNAL_Madd39
-    SLICE_X20Y14.COUT    Topcyc                0.325   u_usb/ADDERTREE_INTERNAL_Madd_113
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_lut<0>10
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>_10
-    SLICE_X20Y15.CIN     net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd3_cy<0>11
-    SLICE_X20Y15.DMUX    Tcind                 0.289   u_usb/ADDERTREE_INTERNAL_Madd_133
-                                                       u_usb/ADDERTREE_INTERNAL_Madd3_xor<0>_14
-    SLICE_X20Y20.C4      net (fanout=1)        0.834   u_usb/ADDERTREE_INTERNAL_Madd_153
-    SLICE_X20Y20.C       Tilo                  0.235   N80
-                                                       u_usb/_n0451<1>1
-    RAMB8_X0Y6.DIADI15   net (fanout=1)        1.845   u_usb/_n0451<1>
-    RAMB8_X0Y6.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
+    SLICE_X19Y26.CQ      Tcko                  0.430   u_usb/cal_count<3>
+                                                       u_usb/cal_count_2
+    SLICE_X15Y20.C4      net (fanout=80)       2.027   u_usb/cal_count<2>
+    SLICE_X15Y20.C       Tilo                  0.259   u_usb/cal_count<7>
+                                                       u_usb/Madd_cal_count[8]_GND_2_o_add_40_OUT_xor<5>11
+    SLICE_X6Y40.C6       net (fanout=64)       3.820   u_usb/cal_count[8]_GND_2_o_add_40_OUT<5>
+    SLICE_X6Y40.C        Tilo                  0.255   u_usb/Mram_buff212_RAMD_O
+                                                       u_usb/Mram_buff212_RAMC
+    SLICE_X2Y40.A1       net (fanout=1)        1.214   u_usb/N243
+    SLICE_X2Y40.A        Tilo                  0.254   N190
+                                                       u_usb/inst_LPM_MUX16114
+    SLICE_X2Y12.A2       net (fanout=3)        2.448   u_usb/n0274<8>
+    SLICE_X2Y12.AMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1116
+    SLICE_X2Y12.BX       net (fanout=2)        0.725   u_usb/ADDERTREE_INTERNAL_Madd1114
+    SLICE_X2Y12.CQ       Tito_logic            0.854   u_usb/ADDERTREE_INTERNAL_Madd_1113
+                                                       u_usb/ADDERTREE_INTERNAL_Madd11_cy<0>_10
+                                                       u_usb/ADDERTREE_INTERNAL_Madd_1011_rt
+    SLICE_X6Y12.C2       net (fanout=1)        1.163   u_usb/ADDERTREE_INTERNAL_Madd_1011
+    SLICE_X6Y12.CMUX     Tilo                  0.326   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd1310
+    SLICE_X6Y12.DX       net (fanout=2)        0.706   u_usb/ADDERTREE_INTERNAL_Madd1311
+    SLICE_X6Y12.COUT     Tdxcy                 0.109   u_usb/ADDERTREE_INTERNAL_Madd_1115
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>_10
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   u_usb/ADDERTREE_INTERNAL_Madd13_cy<0>11
+    SLICE_X6Y13.DMUX     Tcind                 0.320   u_usb/ADDERTREE_INTERNAL_Madd_1313
+                                                       u_usb/ADDERTREE_INTERNAL_Madd13_xor<0>_14
+    SLICE_X8Y13.D1       net (fanout=1)        0.860   u_usb/ADDERTREE_INTERNAL_Madd_1513
+    SLICE_X8Y13.CMUX     Topdc                 0.402   N335
+                                                       u_usb/_n0593<1>2_F
+                                                       u_usb/_n0593<1>2
+    RAMB8_X0Y4.DIADI15   net (fanout=1)        1.325   u_usb/_n0593<1>
+    RAMB8_X0Y4.CLKAWRCLK Trdck_DIA             0.300   u_usb/Mram_out_buff
                                                        u_usb/Mram_out_buff
     -------------------------------------------------  ---------------------------
-    Total                                     15.533ns (4.113ns logic, 11.420ns route)
-                                                       (26.5% logic, 73.5% route)
+    Total                                     18.126ns (3.835ns logic, 14.291ns route)
+                                                       (21.2% logic, 78.8% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_CLOCK_USB = PERIOD TIMEGRP "USB_IFCLK" 48 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point u_usb/Mram_buff418_RAMA (SLICE_X10Y11.D2), 1 path
+Paths for end point u_usb/Mram_buff130/DP (SLICE_X10Y19.D4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.346ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.349ns (requirement - (clock path skew + uncertainty - data path))
   Source:               u_usb/counter_1 (FF)
-  Destination:          u_usb/Mram_buff418_RAMA (RAM)
+  Destination:          u_usb/Mram_buff130/DP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.346ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.359ns (Levels of Logic = 0)
+  Clock Path Skew:      0.010ns (0.093 - 0.083)
   Source Clock:         USB_IFCLK_BUFGP rising at 20.833ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: u_usb/counter_1 to u_usb/Mram_buff418_RAMA
+  Minimum Data Path at Fast Process Corner: u_usb/counter_1 to u_usb/Mram_buff130/DP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y12.AQ      Tcko                  0.234   u_usb/counter<2>
+    SLICE_X12Y19.AQ      Tcko                  0.200   u_usb/counter<2>
                                                        u_usb/counter_1
-    SLICE_X10Y11.D2      net (fanout=146)      0.407   u_usb/counter<1>
-    SLICE_X10Y11.CLK     Tah         (-Th)     0.295   u_usb/Mram_buff418_RAMD_O
-                                                       u_usb/Mram_buff418_RAMA
+    SLICE_X10Y19.D4      net (fanout=281)      0.287   u_usb/counter<1>
+    SLICE_X10Y19.CLK     Tah         (-Th)     0.128   u_usb/N331
+                                                       u_usb/Mram_buff130/DP
     -------------------------------------------------  ---------------------------
-    Total                                      0.346ns (-0.061ns logic, 0.407ns route)
-                                                       (-17.6% logic, 117.6% route)
+    Total                                      0.359ns (0.072ns logic, 0.287ns route)
+                                                       (20.1% logic, 79.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point u_usb/Mram_buff418_RAMB (SLICE_X10Y11.D2), 1 path
+Paths for end point u_usb/Mram_buff230/DP (SLICE_X10Y19.D4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.346ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.349ns (requirement - (clock path skew + uncertainty - data path))
   Source:               u_usb/counter_1 (FF)
-  Destination:          u_usb/Mram_buff418_RAMB (RAM)
+  Destination:          u_usb/Mram_buff230/DP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.346ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.359ns (Levels of Logic = 0)
+  Clock Path Skew:      0.010ns (0.093 - 0.083)
   Source Clock:         USB_IFCLK_BUFGP rising at 20.833ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: u_usb/counter_1 to u_usb/Mram_buff418_RAMB
+  Minimum Data Path at Fast Process Corner: u_usb/counter_1 to u_usb/Mram_buff230/DP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y12.AQ      Tcko                  0.234   u_usb/counter<2>
+    SLICE_X12Y19.AQ      Tcko                  0.200   u_usb/counter<2>
                                                        u_usb/counter_1
-    SLICE_X10Y11.D2      net (fanout=146)      0.407   u_usb/counter<1>
-    SLICE_X10Y11.CLK     Tah         (-Th)     0.295   u_usb/Mram_buff418_RAMD_O
-                                                       u_usb/Mram_buff418_RAMB
+    SLICE_X10Y19.D4      net (fanout=281)      0.287   u_usb/counter<1>
+    SLICE_X10Y19.CLK     Tah         (-Th)     0.128   u_usb/N331
+                                                       u_usb/Mram_buff230/DP
     -------------------------------------------------  ---------------------------
-    Total                                      0.346ns (-0.061ns logic, 0.407ns route)
-                                                       (-17.6% logic, 117.6% route)
+    Total                                      0.359ns (0.072ns logic, 0.287ns route)
+                                                       (20.1% logic, 79.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point u_usb/Mram_buff418_RAMC (SLICE_X10Y11.D2), 1 path
+Paths for end point u_usb/Mram_buff130/SP (SLICE_X10Y19.D4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.346ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.349ns (requirement - (clock path skew + uncertainty - data path))
   Source:               u_usb/counter_1 (FF)
-  Destination:          u_usb/Mram_buff418_RAMC (RAM)
+  Destination:          u_usb/Mram_buff130/SP (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.346ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.359ns (Levels of Logic = 0)
+  Clock Path Skew:      0.010ns (0.093 - 0.083)
   Source Clock:         USB_IFCLK_BUFGP rising at 20.833ns
   Destination Clock:    USB_IFCLK_BUFGP rising at 20.833ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: u_usb/counter_1 to u_usb/Mram_buff418_RAMC
+  Minimum Data Path at Fast Process Corner: u_usb/counter_1 to u_usb/Mram_buff130/SP
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y12.AQ      Tcko                  0.234   u_usb/counter<2>
+    SLICE_X12Y19.AQ      Tcko                  0.200   u_usb/counter<2>
                                                        u_usb/counter_1
-    SLICE_X10Y11.D2      net (fanout=146)      0.407   u_usb/counter<1>
-    SLICE_X10Y11.CLK     Tah         (-Th)     0.295   u_usb/Mram_buff418_RAMD_O
-                                                       u_usb/Mram_buff418_RAMC
+    SLICE_X10Y19.D4      net (fanout=281)      0.287   u_usb/counter<1>
+    SLICE_X10Y19.CLK     Tah         (-Th)     0.128   u_usb/N331
+                                                       u_usb/Mram_buff130/SP
     -------------------------------------------------  ---------------------------
-    Total                                      0.346ns (-0.061ns logic, 0.407ns route)
-                                                       (-17.6% logic, 117.6% route)
+    Total                                      0.359ns (0.072ns logic, 0.287ns route)
+                                                       (20.1% logic, 79.9% route)
 
 --------------------------------------------------------------------------------
 
@@ -698,7 +682,7 @@ Slack: 17.263ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: u_usb/Mram_out_buff/CLKAWRCLK
   Logical resource: u_usb/Mram_out_buff/CLKAWRCLK
-  Location pin: RAMB8_X0Y6.CLKAWRCLK
+  Location pin: RAMB8_X0Y4.CLKAWRCLK
   Clock network: USB_IFCLK_BUFGP
 --------------------------------------------------------------------------------
 Slack: 17.263ns (period - min period limit)
@@ -706,7 +690,7 @@ Slack: 17.263ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
   Physical resource: u_usb/Mram_out_buff/CLKBRDCLK
   Logical resource: u_usb/Mram_out_buff/CLKBRDCLK
-  Location pin: RAMB8_X0Y6.CLKBRDCLK
+  Location pin: RAMB8_X0Y4.CLKBRDCLK
   Clock network: USB_IFCLK_BUFGP
 --------------------------------------------------------------------------------
 Slack: 17.263ns (period - min period limit)
@@ -714,7 +698,7 @@ Slack: 17.263ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: u_usb/Mram_buff/CLKAWRCLK
   Logical resource: u_usb/Mram_buff/CLKAWRCLK
-  Location pin: RAMB8_X1Y5.CLKAWRCLK
+  Location pin: RAMB8_X0Y8.CLKAWRCLK
   Clock network: USB_IFCLK_BUFGP
 --------------------------------------------------------------------------------
 
@@ -731,7 +715,7 @@ Clock to Setup on destination clock USB_IFCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-USB_IFCLK      |   16.029|         |         |         |
+USB_IFCLK      |   18.476|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -740,23 +724,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1723900 paths, 0 nets, and 4479 connections
+Constraints cover 6157237 paths, 0 nets, and 8959 connections
 
 Design statistics:
-   Minimum period:  16.029ns{1}   (Maximum frequency:  62.387MHz)
+   Minimum period:  18.476ns{1}   (Maximum frequency:  54.124MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Jan 17 22:50:44 2019 
+Analysis completed Sun Jan 20 15:49:48 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4595 MB
+Peak Memory Usage: 4614 MB
 
 
 

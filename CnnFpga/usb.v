@@ -109,7 +109,7 @@ always @(*) begin
 			end
 		end
 		WRITE_TO_USB: begin
-		    if(counter == number) begin
+		    if(counter == out_number) begin
 				state_nxt = IDLE;
 			end
 			else begin
@@ -245,7 +245,15 @@ always @(posedge i_usb_ifclk) begin
 						out_buff[out_number] <= buff[cal_count]+buff[cal_count+2]+buff[cal_count+4]+buff[cal_count+6]+buff[cal_count+8];
 						itr <= 1;
 				  end
-              else if (itr == 1) begin
+				  else if (itr == 1) begin
+				      out_buff[out_number] <= buff[cal_count]+buff[cal_count+1]+buff[cal_count+2]-buff[cal_count+6]-buff[cal_count+7]-buff[cal_count+8];
+						itr <= 2;
+				  end
+				  else if (itr == 2) begin
+				      out_buff[out_number] <= buff[cal_count]-buff[cal_count+2]+buff[cal_count+3]-buff[cal_count+5]+buff[cal_count+6]-buff[cal_count+8];
+						itr <= 3;
+				  end
+              else if (itr == 3) begin
 				      out_buff[out_number] <= buff[cal_count+4];
 						cal_count <= cal_count + 3;
 						itr <= 0;

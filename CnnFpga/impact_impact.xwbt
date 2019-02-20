@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\Project\CNNinFPGA\CnnFpga\impact.xsl
+OUTFILE=D:\Project\CNNinFPGA\CnnFpga\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=D:\Project\CNNinFPGA\CnnFpga
+LICENSE=iMPACT
+USER_INFO=iMPACT

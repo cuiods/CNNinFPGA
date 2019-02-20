@@ -52,6 +52,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="fpga.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="fpga.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="fpga.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="fpga_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="fpga_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="fpga_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="fpga_map.mrp" xil_pn:subbranch="Map"/>
@@ -64,16 +65,80 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="fpga_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="fpga_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="fpga_summary.xml"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="fpga_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="fpga_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="fpga_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="fpga_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="fpga_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="fpga_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1547975904" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1547975904">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1547975904" xil_pn:in_ck="36618511296972851" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1547975904">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="fpga.v"/>
+      <outfile xil_pn:name="fpga_tb.v"/>
+      <outfile xil_pn:name="register.v"/>
+      <outfile xil_pn:name="usb.v"/>
+      <outfile xil_pn:name="usb_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1547975911" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6243761584492138742" xil_pn:start_ts="1547975911">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1547975911" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1398122307462404808" xil_pn:start_ts="1547975911">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1547975911" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4335014632576090729" xil_pn:start_ts="1547975911">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1547975911" xil_pn:in_ck="36618511296972851" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1547975911">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="fpga.v"/>
+      <outfile xil_pn:name="fpga_tb.v"/>
+      <outfile xil_pn:name="register.v"/>
+      <outfile xil_pn:name="usb.v"/>
+      <outfile xil_pn:name="usb_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1547975913" xil_pn:in_ck="36618511296972851" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7172418119194625939" xil_pn:start_ts="1547975911">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fpga_tb_beh.prj"/>
+      <outfile xil_pn:name="fpga_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1547975914" xil_pn:in_ck="-60602971513125278" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2255146249949530006" xil_pn:start_ts="1547975913">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fpga_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+    </transform>
     <transform xil_pn:end_ts="1547736613" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="1210861025963229459" xil_pn:start_ts="1547736613">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -98,7 +163,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1547736620" xil_pn:in_ck="-4464777731782862343" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-1913501098933413224" xil_pn:start_ts="1547736613">
+    <transform xil_pn:end_ts="1547970543" xil_pn:in_ck="-4464777731782862343" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-1913501098933413224" xil_pn:start_ts="1547970533">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -120,7 +185,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1547736623" xil_pn:in_ck="7669689465004549838" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6831560397344751306" xil_pn:start_ts="1547736620">
+    <transform xil_pn:end_ts="1547970551" xil_pn:in_ck="7669689465004549838" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6831560397344751306" xil_pn:start_ts="1547970546">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -129,9 +194,11 @@
       <outfile xil_pn:name="fpga.ngd"/>
       <outfile xil_pn:name="fpga_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1547736632" xil_pn:in_ck="7669690871413168079" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="170182801565208134" xil_pn:start_ts="1547736623">
+    <transform xil_pn:end_ts="1547970569" xil_pn:in_ck="7669690871413168079" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="170182801565208134" xil_pn:start_ts="1547970551">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="fpga.pcf"/>
       <outfile xil_pn:name="fpga_map.map"/>
@@ -142,7 +209,7 @@
       <outfile xil_pn:name="fpga_summary.xml"/>
       <outfile xil_pn:name="fpga_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1547736645" xil_pn:in_ck="-8709315589623551128" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1547736632">
+    <transform xil_pn:end_ts="1547970589" xil_pn:in_ck="-8709315589623551128" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1547970569">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -157,7 +224,7 @@
       <outfile xil_pn:name="fpga_pad.txt"/>
       <outfile xil_pn:name="fpga_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1547736658" xil_pn:in_ck="4495873352257" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1547736647">
+    <transform xil_pn:end_ts="1547971189" xil_pn:in_ck="4495873352257" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1547971176">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -170,11 +237,13 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1547736663" xil_pn:in_ck="4495873339403" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1547736662">
+    <transform xil_pn:end_ts="1547869601" xil_pn:in_ck="4495873339403" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1547869600">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1547736645" xil_pn:in_ck="7669505225475560267" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1547736641">
+    <transform xil_pn:end_ts="1547970589" xil_pn:in_ck="7669505225475560267" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1547970585">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
